@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+                             http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.pmarlen.erp</groupId>
+        <artifactId>pmarlen-parent</artifactId>
+        <version>0.7-SNAPSHOT</version>
+    </parent>
+    <artifactId>pmarlen-logic-client</artifactId>
+    <version>${parent.version}</version>
+    <name>Perfumeria Marlen - Logic Client</name>
+
+    <properties>
+		<project.distName>PerfumeriaMarlen_app</project.distName>
+        <development_host>localhost</development_host>
+        <development_port>2080</development_port>
+        <production_host>perfumeriamarlen.dyndns.org</production_host>
+        <production_port>80</production_port>
+        
+        <running_mode>development</running_mode>
+        
+        <staging.dir>${project.build.directory}/staging</staging.dir>
+        <izpack-standalone.version>4.3.1</izpack-standalone.version>
+
+    </properties>
+
+  <!-- ======================== DEPENDENCIES ==================== -->
+
+    <dependencies>
+  <!-- ================= MAIN DEPENDENCIES ============ --> 
+        <dependency>
+            <groupId>com.pmarlen.erp</groupId>
+            <artifactId>pmarlen-jpa-entity</artifactId>
+            <version>${parent.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.pmarlen.erp</groupId>
+            <artifactId>pmarlen-ws-client</artifactId>
+            <version>${parent.version}</version>
+        </dependency>
+  <!-- ================= LIBRARY DEPENDENCIES ============ --> 
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>org.springframework.test</artifactId>
+            <version>${spring.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>org.springframework.beans</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>org.springframework.core</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>org.springframework.context</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>org.springframework.jdbc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>org.springframework.transaction</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>org.springframework.orm</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>com.springsource.org.hibernate</artifactId>
+            <version>3.2.6.ga</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>com.springsource.org.hibernate.annotations</artifactId>
+            <version>3.3.0.ga</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>com.springsource.org.hibernate.ejb</artifactId>
+            <version>3.3.1.ga</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.persistence</groupId>
+            <artifactId>com.springsource.javax.persistence</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.transaction</groupId>
+            <artifactId>com.springsource.javax.transaction</artifactId>
+            <version>1.1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils-core</artifactId>
+            <version>1.8.3</version>
+        </dependency>
+
+    <!-- Derby database -->
+    
+        <dependency>
+            <groupId>org.apache.derby</groupId>
+            <artifactId>derby</artifactId>
+            <version>10.8.1.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.derby</groupId>
+            <artifactId>derbyLocale_es</artifactId>
+            <version>10.8.1.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>com.springsource.slf4j.api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>com.springsource.slf4j.org.apache.commons.logging</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+    <!--
+      No Commons Logging -
+      Based on http://day-to-day-stuff.blogspot.com/2007/07/no-more-commons-logging.html
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>com.springsource.org.apache.commons.logging</artifactId>
+      <version>99.0-does-not-exist</version>
+      <scope>provided</scope>
+    </dependency>
+    -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>com.springsource.ch.qos.logback.classic</artifactId>
+            <version>${logback.version}</version>
+        </dependency>
+<!-- Apache CXF included with ws-commons -->
+<!--
+      <dependency>
+         <groupId>org.apache.cxf</groupId>
+         <artifactId>cxf-rt-frontend-jaxws</artifactId>
+         <version>${cxf.version}</version>
+      </dependency>
+-->
+        <dependency>
+            <groupId>net.sf.bluecove</groupId>
+            <artifactId>bluecove</artifactId>
+<!--        Win7_64
+            <version>2.1.1-SNAPSHOT</version>
+-->
+            <version>2.1.0</version>
+        </dependency>
+
+        <!-- If you plan to run application on Linux -->
+        <dependency>
+            <groupId>net.sf.bluecove</groupId>
+            <artifactId>bluecove-gpl</artifactId>
+<!--        Win7_64
+            <version>2.1.1-SNAPSHOT</version>
+-->
+            <version>2.1.0</version>
+            <scope>runtime</scope>
+        </dependency>
+        
+        <!-- Installer -->
+        
+        <dependency>
+            <groupId>org.codehaus.izpack</groupId>
+            <artifactId>izpack-standalone-compiler</artifactId>
+            <version>${izpack-standalone.version}</version>
+            <optional>true</optional>
+        </dependency>
+    
+        <dependency>
+            <groupId>org.codehaus.plexus</groupId>
+            <artifactId>plexus-utils</artifactId>
+            <version>1.5.6</version>
+        </dependency>
+        
+    </dependencies>
+
+
+    <reporting>   
+        <plugins>   
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>emma-maven-plugin</artifactId>
+                <version>1.0-alpha-3</version>
+                <inherited>true</inherited>
+            </plugin>
+        </plugins>	
+    </reporting>
+	
+    <profiles>
+
+        <profile>
+            <id>preprod</id>
+
+            <properties>
+                <production_host>perfumeriamarlen.dyndns.org</production_host>
+                <production_port>1080</production_port>        
+                <running_mode>production</running_mode>
+            </properties>            
+            
+            <build>
+                
+                <finalName>${project.distName}</finalName>
+                
+                <resources>
+
+                    <resource>
+                        <directory>src/main/resources</directory>
+                        <filtering>true</filtering>
+                        <includes>
+                            <include>**/*.properties</include>
+                        </includes>
+                    </resource>
+
+                    <resource>
+                        <directory>src/main/resources</directory>
+                        <filtering>true</filtering>
+                        <includes>
+                            <include>*/**</include>
+                        </includes>
+                    </resource>
+                </resources>
+                
+                <plugins>
+                    
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <version>2.0.2</version>
+                        <configuration>
+                            <source>1.6</source>
+                            <target>1.6</target>
+                            <encoding>${project.build.sourceEncoding}</encoding>
+                        </configuration>
+                    </plugin>
+
+                    <plugin>
+                        <artifactId>maven-jar-plugin</artifactId>
+                        <configuration>
+                            <archive>
+                                <compress/>
+                                <manifest>
+                                    <addClasspath>true</addClasspath>
+                                    <mainClass>com.pmarlen.client.Main</mainClass>
+                                    <classpathPrefix>lib/</classpathPrefix>
+                                </manifest>
+                            </archive>
+                        </configuration>
+                    </plugin>
+                    
+                    <plugin>
+                        <artifactId>maven-dependency-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>copy-dependencies</goal>
+                                </goals>
+                                <configuration>
+                                    <!--
+                                    <outputDirectory>${project.build.directory}/lib</outputDirectory>
+                                    -->                                    
+                                    <outputDirectory>${staging.dir}/dependency/lib</outputDirectory>
+                                </configuration>
+                            </execution>
+                            <!--
+                            <execution>
+                                <id>standard-installer</id>
+                                <phase>process-resources</phase>
+                                <goals>
+                                    
+                                    <goal>copy-dependencies</goal>
+                                    
+                                </goals>
+                                <configuration>
+                                    <stripVersion>true</stripVersion>
+                                    <excludeGroupIds>org.codehaus.izpack</excludeGroupIds> 
+                                    <outputDirectory>${staging.dir}/dependency/lib</outputDirectory>
+                                </configuration>
+                            </execution>
+                            -->
+                            
+                        </executions>
+                    </plugin>
+                    
+                    <plugin>
+                        <artifactId>maven-antrun-plugin</artifactId>
+                        <version>1.1</version>
+                        <executions>
+                            
+                            <execution>
+                                <id>create-staging-area</id>
+                                <phase>process-resources</phase>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                                <configuration>
+                                    <tasks>
+                                        <echo message="=======================OK this is my task, in PROCESS-RESOURCES phase ==============>>>"/>
+                                        <echo message="=======================>>> development_host= ${development_host}, development_port= ${development_port}"/>
+                                        <copy todir="${staging.dir}">
+                                            <fileset dir="${basedir}/src/izpack" />
+                                        </copy>
+										<echo	message="=======================>>> copy the version file."/>
+										<copy	todir="${staging.dir}" 
+												file="${basedir}/../pmarlen-commons/target/classes/com/tracktopell/util/version/file/Version.properties"/>
+                                    </tasks>
+                                </configuration>
+                            </execution>
+                            
+                        </executions>
+                    </plugin>
+
+                    <plugin>
+                        <groupId>org.codehaus.izpack</groupId>
+                        <artifactId>izpack-maven-plugin</artifactId>
+                        <version>1.0-alpha-5</version>
+                        <dependencies>
+                            <dependency>
+                                <groupId>org.codehaus.izpack</groupId>
+                                <artifactId>izpack-standalone-compiler</artifactId>
+                                <version>${izpack-standalone.version}</version>
+                            </dependency>
+                        </dependencies>
+                        <configuration>
+                            <izpackBasedir>${staging.dir}</izpackBasedir>
+                            <customPanelDirectory>${staging.dir}</customPanelDirectory>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>standard-installer</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>izpack</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+
+                </plugins>
+            </build>
+        </profile>
+
+
+        <profile>
+            <id>devinjob</id>
+            
+            <build>
+                
+                <finalName>${project.distName}</finalName>
+                
+                <resources>
+                    
+                    <resource>
+                        <directory>src/devinjob/resources</directory>
+                        <filtering>true</filtering>
+                        <includes>
+                            <include>**/*.properties</include>
+                        </includes>
+                    </resource>
+                    
+                    <resource>
+                        <directory>src/devinjob/resources</directory>
+                        <filtering>true</filtering>
+                        <includes>
+                            <include>*/**</include>
+                        </includes>
+                    </resource>
+                </resources>
+                
+                <plugins>
+                    
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <version>2.0.2</version>
+                        <configuration>
+                            <source>1.6</source>
+                            <target>1.6</target>
+                            <encoding>${project.build.sourceEncoding}</encoding>
+                        </configuration>
+                    </plugin>
+
+                    <plugin>
+                        <artifactId>maven-jar-plugin</artifactId>
+                        <configuration>
+                            <archive>
+                                <compress/>
+                                <manifest>
+                                    <addClasspath>true</addClasspath>
+                                    <mainClass>com.pmarlen.client.Main</mainClass>
+                                    <classpathPrefix>lib/</classpathPrefix>
+                                </manifest>
+                            </archive>
+                        </configuration>
+                    </plugin>
+                    
+                    <plugin>
+                        <artifactId>maven-dependency-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>copy-dependencies</goal>
+                                </goals>
+                                <configuration>                                   
+                                    <outputDirectory>${staging.dir}/dependency/lib</outputDirectory>
+                                </configuration>
+                            </execution>                          
+                        </executions>
+                    </plugin>
+                    
+                    <plugin>
+                        <artifactId>maven-antrun-plugin</artifactId>
+                        <version>1.1</version>
+                        <executions>
+                            
+                            <execution>
+                                <id>create-staging-area</id>
+                                <phase>process-resources</phase>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                                <configuration>
+                                    <tasks>
+                                        <echo message="=======================OK this is my task, in PROCESS-RESOURCES phase ==============>>>"/>
+                                        <echo message="=======================>>> development_host= ${development_host}, development_port= ${development_port}"/>
+                                        <copy todir="${staging.dir}">
+                                            <fileset dir="${basedir}/src/izpack" />
+                                        </copy>
+                                    </tasks>
+                                </configuration>
+                            </execution>
+                            
+                        </executions>
+                    </plugin>
+
+                    <plugin>
+                        <groupId>org.codehaus.izpack</groupId>
+                        <artifactId>izpack-maven-plugin</artifactId>
+                        <version>1.0-alpha-5</version>
+                        <dependencies>
+                            <dependency>
+                                <groupId>org.codehaus.izpack</groupId>
+                                <artifactId>izpack-standalone-compiler</artifactId>
+                                <version>${izpack-standalone.version}</version>
+                            </dependency>
+                        </dependencies>
+                        <configuration>
+                            <izpackBasedir>${staging.dir}</izpackBasedir>
+                            <customPanelDirectory>${staging.dir}</customPanelDirectory>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>standard-installer</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>izpack</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+
+                </plugins>
+            </build>
+        </profile>
+
+    </profiles>
+</project>

@@ -1,0 +1,375 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd"
+              version="1.2">
+
+	<!--lifecycle>
+		<phase-listener>com.itsolutions.web.jsf.util.phaselistener.PhaseListener</phase-listener>
+	</lifecycle-->
+
+    <application>
+
+        <!-- Tell JSF to use Facelets -->
+        <view-handler>com.sun.facelets.FaceletViewHandler</view-handler>
+
+        <locale-config>
+            <default-locale>es</default-locale>
+            <supported-locale>es</supported-locale>
+            <supported-locale>en</supported-locale>
+        </locale-config>
+
+        <message-bundle>com.pmarlen.web.common.view.properties.UIMessages</message-bundle>
+
+        <resource-bundle>
+            <base-name>com.pmarlen.web.common.view.properties.UIMessages</base-name>
+            <var>UIMessages</var>
+        </resource-bundle>
+
+        <el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
+
+    </application>
+
+	<!--  MANAGED BEANS -->
+    <managed-bean>
+        <managed-bean-name>versionInfo</managed-bean-name>
+        <managed-bean-class>com.pmarlen.web.common.view.messages.VersionInfo</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>sessionUserMB</managed-bean-name>
+        <managed-bean-class>com.pmarlen.web.security.managedbean.SessionUserMB</managed-bean-class>
+
+        <managed-bean-scope>session</managed-bean-scope>
+		<managed-property>
+            <property-name>usuarioJpaController</property-name>
+            <value>#{usuarioJpaController}</value>
+        </managed-property>
+    </managed-bean>
+	
+    <managed-bean>
+        <managed-bean-name>navigationMB</managed-bean-name>
+        <managed-bean-class>com.pmarlen.web.operation.NavigationMB</managed-bean-class>
+
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>pedidoNuevoMB</managed-bean-name>
+        <managed-bean-class>com.pmarlen.web.operation.PedidoNuevoMB</managed-bean-class>
+
+        <managed-bean-scope>session</managed-bean-scope>
+        <managed-property>
+            <property-name>productoJpaController</property-name>
+            <value>#{productoJpaController}</value>
+        </managed-property>
+        <managed-property>
+            <property-name>marcaJpaController</property-name>
+            <value>#{marcaJpaController}</value>
+        </managed-property>
+        <managed-property>
+            <property-name>empresaJpaController</property-name>
+            <value>#{empresaJpaController}</value>
+        </managed-property>
+        <managed-property>
+            <property-name>lineaJpaController</property-name>
+            <value>#{lineaJpaController}</value>
+        </managed-property>
+        <managed-property>
+            <property-name>clienteJpaController</property-name>
+            <value>#{clienteJpaController}</value>
+        </managed-property>
+        <managed-property>
+            <property-name>formaDePagoJpaController</property-name>
+            <value>#{formaDePagoJpaController}</value>
+        </managed-property>
+        <managed-property>
+            <property-name>pedidoVentaJpaController</property-name>
+            <value>#{pedidoVentaJpaController}</value>
+        </managed-property>
+        <managed-property>
+            <property-name>pedidoVentaEstadoJpaController</property-name>
+            <value>#{pedidoVentaEstadoJpaController}</value>
+        </managed-property>
+        <managed-property>
+            <property-name>pedidoVentaBusinessLogic</property-name>
+            <value>#{pedidoVentaBusinessLogic}</value>
+        </managed-property>
+        <managed-property>
+            <property-name>sessionUserMB</property-name>
+            <value>#{sessionUserMB}</value>
+        </managed-property>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>pedidosPreVisorMB</managed-bean-name>
+        <managed-bean-class>com.pmarlen.web.operation.PedidosPreVisorMB</managed-bean-class>
+
+        <managed-bean-scope>session</managed-bean-scope>
+
+        <managed-property>
+            <property-name>pedidoVentaJpaController</property-name>
+            <value>#{pedidoVentaJpaController}</value>
+        </managed-property>
+
+        <managed-property>
+            <property-name>sessionUserMB</property-name>
+            <value>#{sessionUserMB}</value>
+        </managed-property>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>operacionesEnAlmacenesMB</managed-bean-name>
+        <managed-bean-class>com.pmarlen.web.operation.OperacionesEnAlmacenesMB</managed-bean-class>
+
+        <managed-bean-scope>session</managed-bean-scope>
+
+        <managed-property>
+            <property-name>productoJpaController</property-name>
+            <value>#{productoJpaController}</value>
+        </managed-property>
+
+        <managed-property>
+            <property-name>sessionUserMB</property-name>
+            <value>#{sessionUserMB}</value>
+        </managed-property>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>pedidoEnProcesoMB</managed-bean-name>
+        <managed-bean-class>com.pmarlen.web.operation.PedidoEnProcesoMB</managed-bean-class>
+
+        <managed-bean-scope>session</managed-bean-scope>
+        <managed-property>
+            <property-name>productoJpaController</property-name>
+            <value>#{productoJpaController}</value>
+        </managed-property>
+        <managed-property>
+            <property-name>marcaJpaController</property-name>
+            <value>#{marcaJpaController}</value>
+        </managed-property>
+        <managed-property>
+            <property-name>empresaJpaController</property-name>
+            <value>#{empresaJpaController}</value>
+        </managed-property>
+        <managed-property>
+            <property-name>lineaJpaController</property-name>
+            <value>#{lineaJpaController}</value>
+        </managed-property>
+        <managed-property>
+            <property-name>clienteJpaController</property-name>
+            <value>#{clienteJpaController}</value>
+        </managed-property>
+        <managed-property>
+            <property-name>formaDePagoJpaController</property-name>
+            <value>#{formaDePagoJpaController}</value>
+        </managed-property>
+        <managed-property>
+            <property-name>pedidoVentaJpaController</property-name>
+            <value>#{pedidoVentaJpaController}</value>
+        </managed-property>
+        <managed-property>
+            <property-name>pedidoVentaEstadoJpaController</property-name>
+            <value>#{pedidoVentaEstadoJpaController}</value>
+        </managed-property>
+        <managed-property>
+            <property-name>pedidoVentaBusinessLogic</property-name>
+            <value>#{pedidoVentaBusinessLogic}</value>
+        </managed-property>
+        <managed-property>
+            <property-name>sessionUserMB</property-name>
+            <value>#{sessionUserMB}</value>
+        </managed-property>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>visorProductosLineaMarcaMB</managed-bean-name>
+        <managed-bean-class>com.pmarlen.web.operation.VisorProductosLineaMarcaMB</managed-bean-class>
+
+        <managed-bean-scope>session</managed-bean-scope>
+        <managed-property>
+            <property-name>productoJpaController</property-name>
+            <value>#{productoJpaController}</value>
+        </managed-property>
+        <managed-property>
+            <property-name>marcaJpaController</property-name>
+            <value>#{marcaJpaController}</value>
+        </managed-property>
+        <managed-property>
+            <property-name>lineaJpaController</property-name>
+            <value>#{lineaJpaController}</value>
+        </managed-property>
+        <managed-property>
+            <property-name>pedidoNuevoMB</property-name>
+            <value>#{pedidoNuevoMB}</value>
+        </managed-property>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>visorProductosEmpresaMarcaMB</managed-bean-name>
+        <managed-bean-class>com.pmarlen.web.operation.VisorProductosEmpresaMarcaMB</managed-bean-class>
+
+        <managed-bean-scope>session</managed-bean-scope>
+        <managed-property>
+            <property-name>productoJpaController</property-name>
+            <value>#{productoJpaController}</value>
+        </managed-property>
+        <managed-property>
+            <property-name>marcaJpaController</property-name>
+            <value>#{marcaJpaController}</value>
+        </managed-property>
+        <managed-property>
+            <property-name>empresaJpaController</property-name>
+            <value>#{empresaJpaController}</value>
+        </managed-property>
+        <managed-property>
+            <property-name>pedidoNuevoMB</property-name>
+            <value>#{pedidoNuevoMB}</value>
+        </managed-property>
+    </managed-bean>
+        
+    <validator>
+        <validator-id>EMailValidator</validator-id>
+        <validator-class>com.pmarlen.web.common.view.validator.EMailValidator</validator-class>
+    </validator>
+
+    <validator>
+        <validator-id>RFCValidator</validator-id>
+        <validator-class>com.pmarlen.web.common.view.validator.RFCValidator</validator-class>
+    </validator>
+
+    <validator>
+        <validator-id>TelephoneValidator</validator-id>
+        <validator-class>com.pmarlen.web.common.view.validator.TelephoneValidator</validator-class>
+    </validator>
+
+    <validator>
+        <validator-id>ExtensionValidator</validator-id>
+        <validator-class>com.pmarlen.web.common.view.validator.ExtensionValidator</validator-class>
+    </validator>
+
+    <validator>
+        <validator-id>NumberValidator</validator-id>
+        <validator-class>com.pmarlen.web.common.view.validator.NumberValidator</validator-class>
+    </validator>
+
+    <validator>
+        <validator-id>RepeatValueValidator</validator-id>
+        <validator-class>com.pmarlen.web.common.view.validator.RepeatValueValidator</validator-class>
+    </validator>
+
+    <validator>
+        <validator-id>AlphanumericValidator</validator-id>
+        <validator-class>com.pmarlen.web.common.view.validator.AlphanumericValidator</validator-class>
+    </validator>
+
+    <validator>
+        <validator-id>AlphaValidator</validator-id>
+        <validator-class>com.pmarlen.web.common.view.validator.AlphaValidator</validator-class>
+    </validator>
+
+    <validator>
+        <validator-id>CantidadProductoEnPedidoValidator</validator-id>
+        <validator-class>com.pmarlen.web.operation.CantidadProductoEnPedidoValidator</validator-class>
+    </validator>
+
+    <converter>
+        <converter-id>perfilConverter</converter-id>
+        <converter-class>com.pmarlen.web.operation.PerfilConverter</converter-class>
+    </converter>
+
+	<!-- NAVIGATION RULES -->
+
+    <navigation-rule>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>pedidoSimple</from-outcome>
+            <to-view-id>/pages/pedidoSimple.xhtml</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>pedidoNuevo</from-outcome>
+            <to-view-id>/pages/pedidoNuevo.xhtml</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>verProductosXLineaMarca</from-outcome>
+            <to-view-id>/pages/verProductosXLineaMarca.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>verProductosXEmpresaMarca</from-outcome>
+            <to-view-id>/pages/verProductosXEmpresaMarca.xhtml</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>pedidoNuevo</from-outcome>
+            <to-view-id>/pages/pedidoNuevo.xhtml</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>listarPedidosVentas</from-outcome>
+            <to-view-id>/pages/listarPedidosVentas.xhtml</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>pedidoEnProceso</from-outcome>
+            <to-view-id>/pages/pedidoEnProceso.xhtml</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>productosEnAlmacenes</from-outcome>
+            <to-view-id>/pages/productosEnAlmacenes.xhtml</to-view-id>
+        </navigation-case>
+
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/pages/pedidoNuevo.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>pedidoCreado</from-outcome>
+            <to-view-id>/pages/home.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/pages/pedidoEnProceso.xhtml</from-view-id>
+
+        <navigation-case>
+            <from-outcome>pedidoVerificado</from-outcome>
+            <to-view-id>/pages/home.xhtml</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>pedidoSurido</from-outcome>
+            <to-view-id>/pages/home.xhtml</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>pedidoEnviado</from-outcome>
+            <to-view-id>/pages/home.xhtml</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>pedidoDevuelto</from-outcome>
+            <to-view-id>/pages/home.xhtml</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>pedidoCancelado</from-outcome>
+            <to-view-id>/pages/home.xhtml</to-view-id>
+        </navigation-case>
+
+    </navigation-rule>
+
+
+    <navigation-rule>
+        <from-view-id>/pages/listarPedidosVentas.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>editarPedido</from-outcome>
+            <to-view-id>/pages/pedidoEnProceso.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+</faces-config>

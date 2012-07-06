@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:a4j="http://richfaces.org/a4j"
+      xmlns:rich="http://richfaces.org/rich">
+
+    <head>
+
+        <title><ui:insert name="title"/></title>		
+        <link href="${facesContext.externalContext.requestContextPath}/css/itsolutions-web.css"        rel="stylesheet"    type="text/css" />
+		<ui:include src="/templates/include/dynamic-css.xhtml" />
+		
+		<link href="${facesContext.externalContext.requestContextPath}/images/Logo_icono_2.png" rel="shortcut icon" type="image/x-icon"/>
+		<link href="${facesContext.externalContext.requestContextPath}/images/Logo_icono_2.png" rel="icon"          type="image/x-icon"/>
+
+        <script type="text/javascript">
+        function timedMsg() {
+            
+            var t = setTimeout("gotToLogout();",#{sessionUserMB.sessionTimeOutMinus3SecsToDisplay * 1000});
+        }
+        function gotToLogout() {
+
+            window.location = "${facesContext.externalContext.requestContextPath}/pages/logout.jsf";
+        }
+        </script>
+    </head>
+
+    <!--
+	<a4j:region>
+		<script language="javascript">
+			// añadimos una función de callback que será invocada
+			// cuando se produzca el evento de sesión caducada
+			A4J.AJAX.onExpired = function(loc, expiredMsg){
+				// obtenemos el componente que implementa la ventana modal para mostrarlo
+                #{rich:component('sessionTimeOutWindow')}.show();
+			}
+		</script>
+	</a4j:region>
+
+	<rich:modalPanel id="sessionTimeOutWindow" width="375" height="160"
+                     resizeable="false">
+        <f:facet name="header">
+            <h:outputText value="FIN DE SESION" />
+        </f:facet>
+        <h:panelGrid>
+            <h:panelGrid columns="2">
+                <h:outputText styleClass="textMessage" value="LA SESION A TERMINADO" />
+            </h:panelGrid>
+            <h:panelGroup style="display:block; text-align:center; background-color:transparent;" >
+                <input  id="confirmBackToLogin"
+                        type="button"
+                        value="VOLVER A ENTRAR"
+                        onclick="window.location='#{facesContext.externalContext.requestContextPath}/index.jsp';" />
+            </h:panelGroup>
+        </h:panelGrid>
+	</rich:modalPanel>
+-->
+    <body onload="javascript:timedMsg();">
+
+        <ui:include src="/templates/include/header.xhtml" />
+
+        <table width="95%" border="0" align="center">
+            <tr>
+                <td align="center">
+                    <ui:insert name="body">Body</ui:insert>
+                </td>
+            </tr>
+        </table>        
+        
+        <ui:include src="/templates/include/footer.xhtml" />
+        
+		
+    </body>
+    
+</html>

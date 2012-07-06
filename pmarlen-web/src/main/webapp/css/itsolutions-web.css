@@ -1,0 +1,288 @@
+/* <TEMPLATES> */
+* {
+	font-family: Verdana,Arial;
+}
+
+.center
+{
+	margin:auto;
+	width:90%;
+}
+
+.main_header_bg{
+	position : absolute;
+	top : 5px;	
+	left: 5%;
+	min-width: 700px;
+	width: 90%;
+	vertical-align: top;	
+	background-color:#ffffff;
+	/* for IE */
+	filter:alpha(opacity=60);
+	/* CSS3 standard */
+	opacity:0.6;	
+}
+
+.main_header{
+	position : absolute;
+	top : 5px;	
+	left: 5%;
+	min-width: 700px;
+	width: 90%;
+	vertical-align: top;
+	border-style:solid;
+	border-width:1px;
+	border-color:#015367;	
+}
+
+.main_location{
+	position : absolute;
+	top : 112px;
+	left : 0px;
+	vertical-align: top;
+}
+
+.main_location_date{
+	position : absolute;
+	top : 45px;
+	right : 0px;
+	vertical-align: top;
+	text-align: right;
+	font-size: 10px;
+	font-weight: bold;	
+	z-index: 1;
+}
+
+.top_navbar{
+	position : absolute;
+	top : 10px;
+	right : 10%;
+	vertical-align: middle;	
+	font-family : verdana;
+	font-size : 10px;
+	background-color : transparent;
+}
+
+.content_container{
+	position : absolute;
+	top : 130px;	
+	left: 5%;
+	min-width: 700px;
+	width: 90%;
+	vertical-align: top;	
+	font-family : verdana;
+	font-size : 12px;	
+	border-style:solid;
+	border-width:1px;
+	border-color:red;	
+}
+
+.footer-text {
+	font-size: 10px;	
+}
+
+.main_footer{
+     font-size: 9px;
+     text-align: center;
+     position: absolute;
+     bottom: 0px;
+     left: 0px;
+     width: 100%;
+     height: 18px
+}
+
+/* </TEMPLATE> */
+
+.demo_fieldset {
+	margin : 0px;
+	border : 1px solid #ACBECE;
+}
+
+.demo_legend {
+	font-weight : bold; 
+	margin : 0px 0px 0px 15px;
+}
+
+.sample-container {
+	padding: 1px 1px 1px 1px;
+}
+
+.demo_fieldsetLocation {
+	margin : 0px;
+	border : 1px solid #ACBECE;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.demo_fieldsetLocationDate {
+	/*margin : 0px;*/
+	border : none;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+*{
+	font-family: Arial, Verdana, sans-serif;
+}
+
+.tooltip {
+    background-color:#FFFFFF;
+    border-width:3px;
+    padding:10px;
+    /*width:300px;*/
+    /*font-size:11px;*/
+}
+
+.rightAlign {
+  text-align: right;
+} 
+
+.leftAlign {
+  text-align: left;
+}
+
+.centerAlign {
+  text-align: center;
+} 
+
+.columnWidth150PX{
+    width:150px;
+    text-align: left;     
+}
+
+.centerMiddle{
+	text-align: center;
+	vertical-align:middle;
+}
+
+.centerTop{
+	text-align: center;
+	vertical-align:top;
+}
+
+.leftTop{
+	text-align: left;
+	vertical-align:top;
+}
+
+.leftMiddle{
+	text-align: left;
+	vertical-align:middle;
+}
+
+.rightMiddle{
+	text-align: right;
+	vertical-align:middle;
+}
+
+.middle{
+	vertical-align:middle;
+}
+
+.columnWidth5{
+	width: 5%;
+}
+
+.columnWidth10{
+	width: 10%;
+}
+
+.columnWidth15{
+	width: 15%;
+}
+
+.columnWidth20{
+	width: 20%;
+}
+
+.columnWidth25{
+	width: 25%;
+}
+
+.columnWidth30{
+	width: 30%;
+}
+
+.columnWidth35{
+	width: 35%;
+}
+
+.columnWidth40{
+	width: 40%;
+}
+
+.columnWidth45{
+	width: 45%;
+}
+
+.columnWidth50{
+	width: 50%;
+}
+
+.columnWidth60{
+	width: 60%;
+}
+
+.columnWidth65{
+	width: 65%;
+}
+
+.columnWidth70{
+	width: 70%;
+}
+
+.columnWidth75{
+	width: 75%;
+}
+
+.columnWidth80{
+	width: 80%;
+}
+
+.columnWidth85{
+	width: 85%;
+}
+
+.columnWidth90{
+	width: 90%;
+}
+
+.columnWidth95{
+	width: 95%;
+}
+
+.obligatoryColumn{
+    color:red;
+    vertical-align:middle;
+}
+
+.boldText{
+	font-weight: bold;
+}
+
+.loading {
+	/*font-size:11px;*/
+	font-weight: bold;
+}
+
+/* <RICH FACES - OVERWRITING> */
+
+.rich-panel-header {
+	text-align: left;
+}
+
+/*
+	http://docs.jboss.org/richfaces/latest_3_3_X/en/devguide/html/rich_dropDownMenu.html
+*/
+.label_bold_right {
+	display:block; 
+	font-weight:bold; 
+	text-align:right;
+	font-family: Verdana;
+	font-size:10px;
+}
+
+.common_font_component {
+	font-family: Verdana;
+	font-size:10px;
+}

@@ -1,0 +1,104 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:a4j="http://richfaces.org/a4j"
+                xmlns:rich="http://richfaces.org/rich"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:richx="http://xpressosystems/richx"
+                template="/templates/main.xhtml">
+
+    <ui:define name="title">
+		Pedidos de Ventas
+    </ui:define>
+
+    <ui:define name="location">
+        <h:outputText value="Pedidos de Ventas"  style="font-family: Arial;font-size : 10px;"/>
+    </ui:define>
+
+    <ui:define name="body">
+
+        <a4j:form id="listarPedidosVentasForm">
+
+            <h:panelGroup>
+                <rich:messages layout="list" >
+                    <f:facet name="errorMarker">
+                        <h:graphicImage  value="/images/error16x16.gif" />
+                    </f:facet>
+                </rich:messages>
+            </h:panelGroup>
+
+            <rich:dataTable value="#{pedidosPreVisorMB.pedidoVentaList}"
+                            var="pedidoVenta"
+                            width="90%"  
+                            styleClass="center" columnClasses="columnWidth10,columnWidth20,columnWidth30,columnWidth20,columnWidth20" >
+
+                <f:facet name="header">
+                    <h:panelGroup style="display:block; text-align:left; background-color:transparent;" >
+                        <h:outputText value="Pedidos Ventas" />
+                    </h:panelGroup>
+
+                </f:facet>
+
+                <rich:column>
+                    <f:facet name="header">
+                        <h:outputText value="" />
+                    </f:facet>
+                    <h:panelGroup style="display:block; text-align:center; background-color:transparent;" >
+                        <a4j:commandLink reRender="listarPedidosVentasForm,panelEditarCantidad"
+                                         ignoreDupResponses="true"
+                                         action="#{pedidoEnProcesoMB.prepararPedidoParaEdicion}">
+                            <h:graphicImage style="border-style:none;" value="/images/editar.png" title="#{UIMessages.COMMON_EDIT}"/>
+                            <f:param name="pedidoVentaId" value="#{pedidoVenta.id}"/>
+                        </a4j:commandLink>
+                        
+                    </h:panelGroup>
+                </rich:column>
+
+                <rich:column>
+                    <f:facet name="header">
+                        <h:outputText value="Estado" />
+                    </f:facet>
+
+                    <h:panelGroup style="display:block; text-align:left; background-color:transparent;" >
+                        <h:dataTable var="pedidoVentaEstado" value="#{pedidoVenta.pedidoVentaEstadoCollection}">
+                            <h:column>
+                                <h:outputText value="#{pedidoVentaEstado.estado.descripcion}" />
+                            </h:column>
+                            <h:column>
+                                <h:outputText value="#{pedidoVentaEstado.fecha}">
+                                    <f:convertDateTime timeZone="America/Mexico_City" pattern="yyyy/MM/dd HH:mm"/>
+                                </h:outputText>
+                            </h:column>
+                        </h:dataTable>
+                    </h:panelGroup>
+                </rich:column>
+
+                <rich:column>
+                    <f:facet name="header">
+                        <h:outputText value="Cliente" />
+                    </f:facet>
+                    <h:panelGroup style="display:block; text-align:right; background-color:transparent;" >
+                        <h:outputText value="#{pedidoVenta.cliente.razonSocial}" />
+                    </h:panelGroup>
+                </rich:column>
+
+                <rich:column  >
+                    <f:facet name="header">
+                        <h:outputText value="Forma de Pago" />
+                    </f:facet>
+                    <h:outputText value="#{pedidoVenta.formaDePago.descripcion}" />
+                </rich:column>
+
+                <rich:column>
+                    <f:facet name="header">
+                        <h:outputText value="Fiscal" />
+                    </f:facet>
+                    <h:outputText value="FACTURA" rendered="#{pedidoVenta.esFiscal ne 0}"/>
+                    <h:outputText value="NOTA"    rendered="#{pedidoVenta.esFiscal eq 0}"/>
+                </rich:column>
+
+            </rich:dataTable>
+        </a4j:form>
+    </ui:define>
+
+</ui:composition>

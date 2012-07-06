@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>CUSTOM-Tomcat_deploy</actionName>
+            <displayName>Tomcat_deploy</displayName>
+            <preAction>build-with-dependencies</preAction>
+            <goals>
+                <goal>clean</goal>
+                <goal>package</goal>
+                <goal>tomcat:deploy</goal>
+            </goals>
+            <properties>
+                <skipTests>true</skipTests>
+            </properties>
+            <activatedProfiles>
+                <activatedProfile>-Pdevinjob</activatedProfile>
+            </activatedProfiles>
+        </action>
+    </actions>

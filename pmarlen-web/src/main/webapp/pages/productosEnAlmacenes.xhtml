@@ -1,0 +1,144 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:a4j="http://richfaces.org/a4j"
+                xmlns:rich="http://richfaces.org/rich"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:richx="http://xpressosystems/richx"
+                template="/templates/main.xhtml">
+
+    <ui:define name="title">
+		Productos en Almacenes
+    </ui:define>
+
+    <ui:define name="location">
+        <h:outputText value="Administracion > Productos en Almacenes" style="font-family: Arial;font-size : 10px;"/>
+    </ui:define>
+
+    <ui:define name="body">
+
+        <a4j:form id="productosEnAlmacenesForm">
+
+            <h:panelGroup>
+                <rich:messages layout="list" >
+                    <f:facet name="errorMarker">
+                        <h:graphicImage  value="/images/error16x16.gif" />
+                    </f:facet>
+                </rich:messages>
+            </h:panelGroup>
+
+            <rich:dataTable value="#{operacionesEnAlmacenesMB.productoConMovimientos}"
+                            var="producto"
+                            width="90%"
+                            styleClass="center" columnClasses="columnWidth10,columnWidth10,columnWidth40,columnWidth40" >
+
+                <f:facet name="header">
+                    <h:panelGroup style="display:block; text-align:left; background-color:transparent;" >
+                        <h:outputText value="Productos en Almacenes / Movimienetos de Movimientos" />
+                    </h:panelGroup>
+
+                </f:facet>
+
+                <rich:column>
+                    <f:facet name="header">
+                        <h:outputText value="" />
+                    </f:facet>
+                    <!--
+                    <h:panelGroup style="display:block; text-align:center; background-color:transparent;" >
+                        <a4j:commandLink reRender="productosEnAlmacenesForm,panelEditarCantidad"
+                                         ignoreDupResponses="true"
+                                         action="#{pedidoEnProcesoMB.prepararPedidoParaEdicion}">
+                            <h:graphicImage style="border-style:none;" value="/images/editar.png" title="#{UIMessages.COMMON_EDIT}"/>
+                            <f:param name="pedidoVentaId" value="#{producto.id}"/>
+                        </a4j:commandLink>
+                    </h:panelGroup>
+                    -->
+                </rich:column>
+
+                <rich:column>
+                    <f:facet name="header">
+                        <h:outputText value="Producto" />
+                    </f:facet>
+                    <h:panelGroup style="display:block; text-align:right; background-color:transparent;" >
+                        <h:outputText value="#{producto.nombre} / #{producto.presentacion}" />
+                    </h:panelGroup>
+                </rich:column>
+
+                <rich:column>
+                    <f:facet name="header">
+                        <h:outputText value="Almacen Fiscal" />
+                    </f:facet>
+
+                    <h:dataTable var="movimientoHistoricoProducto" value="#{producto.movimientoHistoricoProductoCollection}">
+						<!--
+						<h:column>
+							<h:outputText 	value="#{movimientoHistoricoProducto.almacen.id}"
+											rendered="#{movimientoHistoricoProducto.almacen.id eq 1}"/>
+						</h:column>
+						-->
+						<h:column>
+							<h:outputText 	value="#{movimientoHistoricoProducto.tipoMovimiento.descripcion}"
+											rendered="#{movimientoHistoricoProducto.almacen.id eq 1}"/>
+						</h:column>
+						<h:column>
+							<h:outputText 	value="#{movimientoHistoricoProducto.movimientoHistoricoProductoPK.fecha}"
+											rendered="#{movimientoHistoricoProducto.almacen.id eq 1}">
+								<f:convertDateTime timeZone="America/Mexico_City" pattern="yyyy/MM/dd HH:mm"/>
+							</h:outputText>
+						</h:column>
+						<h:column>
+							<h:outputText 	value="#{movimientoHistoricoProducto.cantidad}"
+											rendered="#{movimientoHistoricoProducto.almacen.id eq 1}"/>
+						</h:column>
+                    </h:dataTable>
+					<h:dataTable var="almacenProducto"
+                                 value="#{producto.almacenProductoCollection}">
+						<h:column>
+                            <h:outputText 	value="cantidadActual=#{almacenProducto.cantidadActual}"
+											rendered="#{almacenProducto.almacenProductoPK.almacenId eq 1}"/>
+                        </h:column>
+                    </h:dataTable>
+                </rich:column>
+
+                <rich:column>
+                    <f:facet name="header">
+                        <h:outputText value="Almacen No-Fiscal" />
+                    </f:facet>
+
+					<h:dataTable var="movimientoHistoricoProducto" value="#{producto.movimientoHistoricoProductoCollection}">
+						<!--
+						<h:column>
+							<h:outputText 	value="#{movimientoHistoricoProducto.almacen.id}"
+											rendered="#{movimientoHistoricoProducto.almacen.id eq 2}"/>
+						</h:column>
+						-->
+						<h:column>
+							<h:outputText 	value="#{movimientoHistoricoProducto.tipoMovimiento.descripcion}"
+											rendered="#{movimientoHistoricoProducto.almacen.id eq 2}"/>
+						</h:column>
+						<h:column>
+							<h:outputText 	value="#{movimientoHistoricoProducto.movimientoHistoricoProductoPK.fecha}"
+											rendered="#{movimientoHistoricoProducto.almacen.id eq 2}">
+								<f:convertDateTime timeZone="America/Mexico_City" pattern="yyyy/MM/dd HH:mm"/>
+							</h:outputText>
+						</h:column>
+						<h:column>
+							<h:outputText 	value="#{movimientoHistoricoProducto.cantidad}"
+											rendered="#{movimientoHistoricoProducto.almacen.id eq 2}"/>
+						</h:column>
+                    </h:dataTable>
+
+					<h:dataTable var="almacenProducto"
+                                 value="#{producto.almacenProductoCollection}">
+						<h:column>
+                            <h:outputText value="cantidadActual=#{almacenProducto.cantidadActual}"
+										  rendered="#{almacenProducto.almacenProductoPK.almacenId eq 2}"/>
+                        </h:column>
+                    </h:dataTable>
+                </rich:column>
+
+            </rich:dataTable>
+        </a4j:form>
+    </ui:define>
+
+</ui:composition>

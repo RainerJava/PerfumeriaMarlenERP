@@ -1,0 +1,95 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:a4j="http://richfaces.org/a4j"
+                xmlns:rich="http://richfaces.org/rich"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:richx="http://xpressosystems/richx"
+                template="/templates/main.xhtml">
+
+    <ui:define name="title">
+		Productos x Empresa-Marca
+    </ui:define>
+
+    <ui:define name="location">
+        <h:outputText value="Operacion > Productos x Empresa-Marca"  style="font-family: Arial;font-size : 10px;"/>
+    </ui:define>
+
+    <ui:define name="body">
+
+        <a4j:form id="pedidoSearchForm" limitToList="searchpedidoNuevoTabPanel">
+            
+            <h:panelGrid columns="2" columnClasses="columnWidth30,columnWidth70" width="50%">
+                <h:outputText   value="Empresa:"
+                                styleClass="littleLabel_bold_right"/>
+                
+                <h:selectOneMenu value="#{visorProductosEmpresaMarcaMB.empresaSelectedId}"
+                                 valueChangeListener="#{visorProductosEmpresaMarcaMB.empresaChanged}">
+                    <f:selectItems value="#{visorProductosEmpresaMarcaMB.empresaList}"/>
+
+                    <a4j:support reRender="pedidoSearchForm" event="onchange"/>
+                </h:selectOneMenu>
+                
+                <h:outputText  value="Marca:" styleClass="littleLabel_bold_right" />
+                <h:selectOneMenu    id="searchByLineaMarca"
+                                    value="#{visorProductosEmpresaMarcaMB.marcaSelectedId}"
+                                    valueChangeListener="#{visorProductosEmpresaMarcaMB.marcaChanged}">
+
+                    <f:selectItems  value="#{visorProductosEmpresaMarcaMB.marcaList}"/>
+
+                    <a4j:support reRender="pedidoSearchForm" event="onchange"/>
+
+                </h:selectOneMenu>
+                
+            </h:panelGrid>
+            <h:panelGroup>
+                <rich:messages layout="list" globalOnly="true">
+                    <f:facet name="errorMarker">
+                        <h:graphicImage  value="/images/error16x16.gif" />
+                    </f:facet>
+                </rich:messages>
+            </h:panelGroup>
+            
+            <rich:dataGrid var="producto"
+                           value="#{visorProductosEmpresaMarcaMB.productoList}" columns="5" width="100%"
+                           columnClasses="columnWidth20,columnWidth20,columnWidth20,columnWidth20,columnWidth20"
+                           rendered="#{not empty visorProductosEmpresaMarcaMB.marcaSelectedId }"
+                           id="productoListDataGrid">
+
+                <h:panelGroup style="display:block; text-align:center; background-color:transparent;">
+                    <h:graphicImage value="/dynamicImages/Producto?id=#{producto.id}_160x120" />
+                </h:panelGroup>
+
+                <h:panelGroup style="display:block; text-align:left; background-color:transparent;">
+                    <h:panelGrid columns="1">
+                        <h:outputText  value="#{producto.nombre}" style="font-family: Arial; font-size : 12px;font-weight : bold; color: blue;"/>
+                        <h:outputText  value="#{producto.presentacion}"       style="font-family: Arial; font-size : 10px;font-weight : normal; color: black;"/>
+                        <h:outputText  value="#{producto.unidadesPorCaja} / #{producto.contenido} #{producto.unidadMedida}" style="font-family: Arial; font-size : 10px;font-weight : normal; color: gray;"/>
+                        <h:panelGroup>
+                            <h:outputText  value="#{producto.precioBase}" style="font-family: Arial; font-size : 10px;font-weight : normal; color: gray; text-decoration: line-through;">
+                                <f:convertNumber maxFractionDigits="2" pattern="$ ###,###,##0.00" locale="es_MX"/>
+                            </h:outputText>
+                            <rich:spacer width="5"/>
+                            <h:outputText  value="#{producto.precioBase * ( 1.0 - producto.factorMaxDesc)}" style="font-family: Arial; font-size : 10px;font-weight : normal; color: red;">
+                                <f:convertNumber maxFractionDigits="2" pattern="$ ###,###,##0.00" locale="es_MX"/>
+                            </h:outputText>
+                        </h:panelGroup>
+
+                    </h:panelGrid>
+                </h:panelGroup>
+
+                <h:panelGroup style="display:block; text-align:center; background-color:transparent;">
+                    <a4j:commandLink actionListener="#{pedidoNuevoMB.agregar1Producto}">
+                        <h:graphicImage style="border-style:none;" value="/images/cart_add.png" title="Agregar a Pepedido Actual"/>
+                        <f:param name="productoId" value="#{producto.id}"/>
+                    </a4j:commandLink>
+                </h:panelGroup>
+
+            </rich:dataGrid>
+            
+        </a4j:form>
+
+
+    </ui:define>
+
+</ui:composition>

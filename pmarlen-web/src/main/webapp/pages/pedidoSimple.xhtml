@@ -1,0 +1,110 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:a4j="http://richfaces.org/a4j"
+                xmlns:rich="http://richfaces.org/rich"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:richx="http://xpressosystems/richx"
+                template="/templates/main.xhtml">
+
+    <ui:define name="title">
+		pedido simple
+    </ui:define>
+
+    <ui:define name="location">
+        <h:outputText value="Operacion > Pedido Simple"  style="font-family: Arial;font-size : 10px;"/>
+    </ui:define>
+
+    <ui:define name="body">
+
+        <a4j:form id="pedidoSearchForm" limitToList="searchPedidoSimpleTabPanel">
+
+            <rich:tabPanel switchType="ajax" id="searchModeTabPane" selectedTab="#{pedidoSimpleMB.searchTabSelected}">
+                <rich:tab label="Por Empresa" id="empresaTab" >
+                    <h:panelGrid columns="2" columnClasses="columnWidth30,columnWidth70" width="50%">
+                        <h:outputText   value="Empresa:"
+                                        styleClass="littleLabel_bold_right"/>
+
+                        <h:selectOneMenu value="#{pedidoSimpleMB.empresaSelected.id}"
+                                         valueChangeListener="#{pedidoSimpleMB.empresaChanged}">
+                            <f:selectItems value="#{pedidoSimpleMB.empresaList}"/>
+
+                            <a4j:support reRender="pedidoSearchForm" event="onchange"/>
+                        </h:selectOneMenu>
+
+                        <h:outputText  value="Marca:" styleClass="littleLabel_bold_right" />
+                        <h:selectOneMenu    id="searchByEmpresaMarca"
+                                            value="#{pedidoSimpleMB.marcaSelected.id}"
+                                            valueChangeListener="#{pedidoSimpleMB.marcaChanged}">
+
+                            <f:selectItems  value="#{pedidoSimpleMB.marcaList}"/>
+
+                            <a4j:support reRender="pedidoSearchForm" event="onchange"/>
+
+                        </h:selectOneMenu>
+                    </h:panelGrid>
+
+                </rich:tab>
+
+                <rich:tab label="Por Linea" id="lineaTab">
+                    <h:panelGrid columns="2" columnClasses="columnWidth30,columnWidth70" width="50%">
+                        <h:outputText   value="Linea:"
+                                        styleClass="littleLabel_bold_right"/>
+
+                        <h:selectOneMenu value="#{pedidoSimpleMB.lineaSelected.id}"
+                                         valueChangeListener="#{pedidoSimpleMB.lineaChanged}">
+                            <f:selectItems value="#{pedidoSimpleMB.lineaList}"/>
+
+                            <a4j:support reRender="pedidoSearchForm" event="onchange"/>
+                        </h:selectOneMenu>
+
+                        <h:outputText  value="Marca:" styleClass="littleLabel_bold_right" />
+                        <h:selectOneMenu    id="searchByLineaMarca"
+                                            value="#{pedidoSimpleMB.marcaSelected.id}"
+                                            valueChangeListener="#{pedidoSimpleMB.marcaChanged}">
+
+                            <f:selectItems  value="#{pedidoSimpleMB.marcaList}"/>
+
+                            <a4j:support reRender="pedidoSearchForm" event="onchange"/>
+
+                        </h:selectOneMenu>
+                    </h:panelGrid>
+
+                </rich:tab>
+
+            </rich:tabPanel>
+
+            <h:panelGroup>
+                <rich:messages layout="list" globalOnly="true">
+                    <f:facet name="errorMarker">
+                        <h:graphicImage  value="/images/error16x16.gif" />
+                    </f:facet>
+                </rich:messages>
+            </h:panelGroup>
+
+            <rich:dataGrid var="producto"
+                           value="#{pedidoSimpleMB.productoList}" columns="5" width="100%"
+                           rendered="#{not empty pedidoSimpleMB.marcaSelected.id }"
+                           id="productoListDataGrid">
+                <rich:panel>
+                    <f:facet name="header">
+                        <h:outputText value="Producto:"/>
+                        <h:panelGroup >
+                            <h:outputText value="#{producto.nombre}"/>
+                        </h:panelGroup>
+                    </f:facet>
+                    <h:graphicImage value="/dynamicImages/Producto?id=#{producto.id}_160x120" />
+                    <h:panelGrid columns="2" columnClasses="columnWidth30,columnWidth70">
+                        <h:outputText  value="Presentacion:" styleClass="littleLabel_bold_right"/>
+                        <h:outputText  value="#{producto.presentacion}" styleClass="common_font_littleComponent"/>
+                    </h:panelGrid>
+                </rich:panel>
+
+            </rich:dataGrid>
+
+        </a4j:form>
+
+
+    </ui:define>
+
+</ui:composition>

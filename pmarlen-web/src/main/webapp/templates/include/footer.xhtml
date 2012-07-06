@@ -1,0 +1,32 @@
+<html	xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:a4j="http://richfaces.org/a4j">
+
+    <table cellpadding="0" cellspacing="0" border="0" align="center">
+        <tr>
+            <td align="center" height="20">
+                <a href="http://google.com" style="color:#000; display:block" class="footer-text">
+                    [<h:outputText value="#{UIMessages.ENTERPRISE_INFO}"/>]
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <div style="color:#A0A0A0; display:block" class="footer-text">
+                    <a href="http://xpressosystems.com">XPRESSO SYSTEMS</a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <div style="color:#A0A0A0; display:block" class="footer-text">
+                    Version: #{versionInfo.version} | Last build  : #{versionInfo.maven_build_timestamp}
+                </div>				
+            </td>
+        </tr>
+    </table>
+
+</html>
+

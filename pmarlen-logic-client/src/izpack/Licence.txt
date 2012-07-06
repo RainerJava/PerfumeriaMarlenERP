@@ -1,0 +1,565 @@
+TÉRMINOS DE LICENCIA DEL SOFTWARE DE PERFUMERIA MARLEN
+
+Los presentes términos de licencia son un contrato entre Perfumeria Marlen (o, en función del
+país en que usted resida, una de las sociedades de su grupo) y usted. Sírvase leerlos
+detenidamente. Son de aplicación al software arriba mencionado, el cual incluye los medios en
+los que lo haya recibido, en su caso. Estos términos de licencia también serán de aplicación a los
+siguientes elementos de Perfumeria Marlen:
+· actualizaciones,
+· suplementos,
+· servicios basados en Internet, y
+· servicios de soporte técnico
+correspondientes a este software, a menos que existan otros términos aplicables a dichos
+elementos. En tal caso, se aplicarán dichos otros términos.
+Al hacer uso del software, usted estará aceptando estos términos. Si usted no los
+acepta, no use el software. En lugar de usarlo, devuélvalo al distribuidor a los efectos
+de obtener un reembolso o crédito. Si usted no puede obtener un reembolso de este modo,
+póngase en contacto con Perfumeria Marlen o con la sociedad del grupo Perfumeria Marlen correspondiente a su
+país para obtener información sobre la política de reembolsos de Perfumeria Marlen. Consulte
+www.Perfumeria Marlen.com/worldwide. Para México, llame al (011)(91) (55) 5267-2000, o bien visite el
+sitio Web www.Perfumeria Marlen.com/mexico/default.asp.
+Tal como se describe a continuación, la utilización por su parte del software
+constituirá su consentimiento para la transmisión de determinada información
+durante la activación, la validación y los servicios basados en Internet.
+Si usted cumple los presentes términos de licencia, tendrá los siguientes derechos
+para cada licencia que adquiera.
+
+1. INTRODUCCIÓN.
+
+Derechos específicos de la edición. Consulte en las secciones Términos de licencia
+adicionales de la parte final de este contrato los términos que se aplican a una edición
+concreta del software.
+
+2. DERECHOS DE INSTALACIÓN Y USO. 
+
+3. REQUISITOS DE LICENCIA Y/O DERECHOS DE USO ADICIONALES.
+
+4. ACTIVACIÓN OBLIGATORIA.
+
+5. VALIDACIÓN.
+a. De vez en cuando, el software validará el software, actualizará o requerirá la descarga de
+la función de validación del software. La validación verifica que se ha activado el
+software y que cuenta con una licencia adecuada. La validación también le permite
+utilizar algunas funciones del software u obtener ventajas adicionales. Para obtener
+más información acerca de esta característica, consulte
+http://go.Perfumeria Marlen.com/fwlink/?linkid=39157.
+b. Mientras se compruebe la validación, el software enviará información sobre el propio
+software y el dispositivo a Perfumeria Marlen. Esta información incluye la versión y la clave de
+producto del software, así como la dirección de protocolo de Internet del dispositivo.
+Perfumeria Marlen no utiliza esta información para identificarle ni ponerse en contacto con usted.
+El hecho de utilizar el software se considera un consentimiento por su parte para la
+transmisión de esta información. Si desea obtener más información acerca de la
+validación y de los datos que se envían durante una comprobación de validación,
+consulte http://go.Perfumeria Marlen.com/fwlink/?linkid=69500.
+c.
+Si después de una comprobación de validación el software carece de una licencia
+adecuada, su funcionamiento puede verse afectado. Por ejemplo, puede
+· necesitar reactivar el software, o
+· recibir recordatorios para obtener una copia con licencia adecuada del software,
+o quizás no pueda
+· utilizar o seguir utilizando algunas funciones del software, o
+· obtener determinadas actualizaciones o mejoras de Perfumeria Marlen.
+d. Las actualizaciones o mejoras del software sólo podrá obtenerlas de Perfumeria Marlen o de
+fuentes autorizadas. Si desea obtener más información acerca de la obtención de
+actualizaciones de fuentes autorizadas, consulte
+http://go.Perfumeria Marlen.com/fwlink/?linkid=69502.
+6. SOFTWARE POTENCIALMENTE NO DESEADO. Cuando esté activado, Windows Defender
+buscará en su ordenador “spyware,” “adware” (software publicitario) y otro software
+potencialmente no deseado. Si localiza software potencialmente no deseado, el software le
+preguntará si desea omitirlo, deshabilitarlo (poner en cuarentena) o eliminarlo. Si no se
+modifica la configuración predeterminada, tras el análisis se eliminará automáticamente
+cualquier software potencialmente no deseado cuyo riesgo se considere “alto” o “grave”. La
+eliminación o deshabilitación del software potencialmente no deseado puede hacer que
+· otro software del ordenador deje de funcionar, o
+· incumpla la licencia de uso de otro software instalado en su ordenador.
+Con el uso de este software, también es posible que elimine o deshabilite otro software que
+no sea potencialmente no deseado.
+7. SERVICIOS BASADOS EN INTERNET. Perfumeria Marlen proporciona con el software servicios
+basados en Internet. Perfumeria Marlen podrá modificarlos o cancelarlos en cualquier momento.
+a. Consentimiento para servicios basados en Internet. Las funciones del software
+descritas a continuación y en la Declaración de privacidad de Windows Vista se conectan
+a través de Internet a los sistemas informáticos de Perfumeria Marlen o de proveedores de
+servicios. En algunos casos, usted no recibirá una notificación independiente al
+conectarse. Usted puede optar por desactivar estas funciones o por no utilizarlas. Para
+obtener más información acerca de estas funciones, consulte la Declaración de privacidad
+de Windows Vista en http://go.Perfumeria Marlen.com/fwlink/?linkid=20615. El hecho de
+utilizar estas funciones se considera un consentimiento por su parte para la
+transmisión de esta información. Perfumeria Marlen no utiliza esta información para
+identificarle ni ponerse en contacto con usted.
+Información del ordenador. Las siguientes funciones utilizan protocolos de Internet, que
+envían a los sistemas pertinentes información de su ordenador, como su dirección de
+protocolo de Internet, el tipo de sistema operativo y de explorador, el nombre y versión
+del software que esté utilizando, y el código de idioma del dispositivo en el que esté
+instalado el software. Perfumeria Marlen utiliza esta información para poner a su disposición los
+servicios basados en Internet.
+· Función de actualización de Windows. Quizás desee conectar nuevo hardware a su
+     dispositivo. Es posible que el dispositivo no disponga de los controladores necesarios
+    para comunicarse con dicho hardware. Si así fuese, la función de actualización del
+      software puede obtener el controlador correcto de Perfumeria Marlen e instalarlo en su
+     dispositivo. Usted puede desactivar esta función de actualización.
+· Funciones de contenido Web. Hay funciones en el software que permiten obtener de
+  Perfumeria Marlen contenido relacionado y proporcionárselo a usted. Algunos ejemplos de
+  estas funciones los constituyen las imágenes prediseñadas, las plantillas, la asistencia
+   y entrenamiento en línea, así como Appshelp. Usted puede optar por no utilizar las
+    funciones de contenido Web.
+· Certificados digitales. El software utiliza certificados digitales. Estos certificados
+  digitales confirman la identidad de los usuarios de Internet que envían información
+   encriptada con el estándar x.509. También se pueden utilizar para firmar
+    digitalmente archivos y macros con el fin de verificar la integridad y el origen del
+   contenido del archivo. Cuando es posible, el software recupera los certificados y
+  actualiza las listas de revocación de certificados en Internet.
+· Actualización automática de raíz. La función de Actualización Automática de Raíz
+         actualiza la lista de entidades emisoras de certificados de confianza. Usted puede
+        desactivar esta función.
+· Administración de derechos digitales de Windows Media. Los propietarios de
+   contenidos utilizan la tecnología de administración de derechos digitales de Windows
+    Media (WMDRM) para la protección de su propiedad intelectual e industrial
+    (incluyendo los derechos de autor). Este software y los programas de software de
+   terceros utilizan WMDRM para reproducir y copiar contenidos protegidos por WMDRM.
+  Si el software no protegiese los contenidos, los propietarios de los mismos pueden
+ exigir a Perfumeria Marlen que revoque la capacidad del software para utilizar WMDRM con el
+objeto de reproducir o copiar contenidos protegidos. Esta revocación no afecta a los
+demás contenidos. Al descargar licencias de contenidos protegidos, usted estará
+ aceptando que Perfumeria Marlen pueda incluir con las licencias una lista de revocación. Los
+ propietarios de contenidos pueden exigirle que actualice WMDRM para acceder a sus
+contenidos. Los programas de software de Perfumeria Marlen que incluyan WMDRM le pedirán
+su autorización antes de proceder a la actualización. Si usted decide no actualizarse,
+ no podrá acceder a aquellos contenidos que requieran la actualización. Usted tiene la
+  opción de desactivar las funciones de WMDRM con acceso a Internet. Aunque dichas
+  funciones estén desactivadas, usted podrá no obstante reproducir contenidos para
+   los que disponga de una licencia válida.
+· Reproductor de Windows Media. Cuando usted utilice el Reproductor de Windows
+  Media, éste comprobará con Perfumeria Marlen si
+· en su región existen servicios de música online compatibles;
+· existen nuevas versiones del reproductor; y
+· existen los códecs pertinentes si su dispositivo no dispone de los adecuados para
+   reproducir contenidos.
+Puede optar por desactivar esta última función. Para obtener más información, visite
+http://go.Perfumeria Marlen.com/fwlink/?linkid=44073.
+· Actualización de Malicious Software Removal/Clean On. Antes de su instalación, el
+    software comprobará la existencia de determinado software malintencionado
+    cotejando el relacionado en http://www.support.Perfumeria Marlen.com/?kbid=890830
+   (“Código dañino”) y lo eliminará del dispositivo. Cuando el software intercepte código
+          dañino en su dispositivo, se enviará un informe a Perfumeria Marlen sobre cualquier tipo de
+           código dañino detectado o errores encontrados durante la búsqueda de código
+              dañino. En el informe no se incluye ningún tipo de información que pueda utilizarse
+                para identificarle. Puede deshabilitar la función de información sobre código dañino
+                   del software siguiendo las instrucciones que se indican en
+                  http://www.support.Perfumeria Marlen.com/?kbid=890830.
+· Icono de estado de conectividad de red. Esta característica determina si un sistema
+   está conectado a una red mediante supervisión pasiva del tráfico de la red o
+     mediante consultas DNS o HTTP activas. La consulta solamente transfiere la
+    información TCP/IP o DNS estándar con propósitos de enrutamiento. Puede
+      desactivar la característica de consulta activa mediante una configuración del
+       Registro.
+· Windows Time Service. Este servicio se sincroniza con time.windows.com una vez a
+  la semana para proporcionar al ordenador la hora correcta. Puede desactivar esta
+ función o bien elegir qué origen prefiere para la hora en el subprograma Fecha y
+  hora del Panel de control. La conexión utiliza el protocolo NTP estándar.
+·
+Servicio de recorrido de Traducción de direcciones de red (NAT) de IPv6 (Teredo).
+Esta función ayuda a los dispositivos domésticos existentes de puerta de enlace a
+Internet a realizar la transición hacia IPv6. IPv6 es el protocolo de Internet de
+próxima generación. Ayuda a permitir la conectividad de un extremo a otro que
+suelen necesitar las aplicaciones punto a punto. Para ello, cada vez que inicie el
+software, el servicio cliente Teredo intentará encontrar un servicio público de
+Internet Teredo enviando una consulta a través de Internet. Esta consulta sólo
+transfiere información estándar del Servicio de nombres de dominio para averiguar si
+su equipo está conectado a Internet y puede encontrar un servicio público Teredo.
+Si usted
+· utiliza una aplicación (como Windows Meeting Space) que necesita conectividad
+   IPv6 o
+· configura el servidor de seguridad para permitir siempre conectividad IPv6,
+se enviará información estándar del protocolo de Internet al servicio Teredo en
+Perfumeria Marlen a intervalos periódicos de manera predeterminada. No se enviará ninguna
+otra información a Perfumeria Marlen. Puede cambiar este valor predeterminado para utilizar
+servidores que no sean de Perfumeria Marlen. También puede desactivar esta función
+mediante una utilidad de la línea de comandos denominada “netsh”.
+b. Uso de información. Perfumeria Marlen podrá usar la información del equipo, los informes de
+error y los informes de código dañino para mejorar su software y servicios. Y podremos
+también compartirla con otros, como proveedores de software y hardware Podrán usar la
+información para mejorar el funcionamiento de sus productos con el software de
+Perfumeria Marlen.
+c.
+Uso indebido de servicios basados en Internet. Usted no podrá utilizar dichos
+servicios de una manera tal que pueda perjudicar u obstaculizar su uso por parte de
+otros usuarios. Usted no podrá utilizar los servicios para intentar acceder sin autorización
+a cualquier servicio, dato, cuenta o red, sean cuales fueren los métodos.
+8. ALCANCE DE LA LICENCIA. El software se cede bajo licencia y no es objeto de venta. El
+presente contrato sólo le otorga algunos derechos de uso del software. Perfumeria Marlen se reserva
+todos los demás derechos. A menos que la legislación aplicable le otorgue más derechos a
+pesar de esta limitación, usted sólo podrá utilizar el software tal como lo autoriza
+expresamente el presente contrato. Al hacerlo, deberá ajustarse a las limitaciones técnicas
+del software que sólo permiten utilizarlo de determinadas formas. Para obtener más
+información, consulte http://www.Perfumeria Marlen.com/licensing/userights. Usted no podrá:
+· eludir las limitaciones técnicas del software,
+· utilizar técnicas de ingeniería inversa, descompilar o desensamblar el software, excepto y
+    únicamente en la medida en que ello esté expresamente permitido por la ley a pesar de
+     la presente limitación
+· usar componentes del software para ejecutar aplicaciones que no se ejecuten en el
+  software;
+· hacer más copias del software de las que especifica este contrato o permite la legislación
+    vigente a pesar de esta limitación,
+· hacer público el software para que otros lo copien,
+· alquilar, arrendar o ceder el software, o
+· utilizar el software para prestar servicios de alojamiento de software comercial.
+9. PRUEBAS COMPARATIVAS DE Perfumeria Marlen .NET. El software incluye uno o varios
+componentes de .NET Framework 3.0 (“componentes .NET”). Usted podrá realizar pruebas
+comparativas internas de esos componentes. Podrá divulgar los resultados de cualquier
+prueba comparativa de dichos componentes siempre que cumpla con las condiciones
+establecidas en http://go.Perfumeria Marlen.com/fwlink/?LinkID=66406. Con independencia de
+cualquier otro contrato que pueda haber formalizado con Perfumeria Marlen, si revela dichos
+resultados de pruebas comparativas, Perfumeria Marlen tendrá derecho a divulgar los resultados de
+las pruebas comparativas que realice sobre los productos de usted que compitan con el
+componente .NET en cuestión, siempre que cumpla las mismas condiciones establecidas en
+http://go.Perfumeria Marlen.com/fwlink/?LinkID=66406.
+10. COPIA DE SEGURIDAD. Podrá realizar una única copia de seguridad del soporte del
+software. Usted sólo podrá utilizarla para volver a instalar el software.
+11. DOCUMENTACIÓN. Toda persona que tenga acceso válido a su ordenador o a la red
+interna puede copiar y utilizar la documentación a efectos de consulta internos.
+12. SOFTWARE NO PARA REVENTA ("Not for Resale" o "NFR"). Usted no podrá vender el
+software identificado como “NPR”, “NFR” o “No Para Reventa”.
+13. ACTUALIZACIONES. Para utilizar el software actualizado, deberá contar primero con una
+licencia del software que sea apta para la actualización. Con la actualización, el presente
+contrato sustituirá al contrato del software a partir del cual se actualice. Después de la
+actualización, ya no podrá utilizar el software a partir del cual se haya actualizado.
+14. PRUEBA DE LICENCIA (“Proof of License” o “POL”).
+a. Prueba de Licencia (“Proof of License” o “POL”) genuina. Si usted adquirió el
+software en un disco u otro soporte físico, una etiqueta genuina “Prueba de Licencia”
+(“Proof of License” o “POL”) de Perfumeria Marlen con una copia original del software indica que
+el software tiene licencia. Para que esta etiqueta sea válida, debe aparecer en el paquete
+de Perfumeria Marlen. La etiqueta no será válida si la recibe por separado. Deberá conservar el
+paquete con la etiqueta a fin de justificar que tiene licencia para utilizar el software.
+b. Licencia de Windows Anytime Upgrade. Si actualiza el software mediante Windows
+Anytime Upgrade, su prueba de licencia se identificará mediante
+· · una licencia digital guardada en el digital locker de Windows Marketplace y
+· 
+c.
+la etiqueta de prueba de licencia de Perfumeria Marlen genuina correspondiente al software a
+partir del cual se haya actualizado,
+una prueba de compra emitida por un comerciante de Windows Anytime Upgrade
+que identifique el software.
+Para identificar un software de Perfumeria Marlen genuino, consulte http://www.howtotell.com.
+15. REASIGNACIÓN A OTRO DISPOSITIVO.
+a. Software distinto de Windows Anytime Upgrade. Usted podrá desinstalar el
+software e instalarlo en otro dispositivo para su uso. No obstante, no podrá hacerlo si
+es para compartir esta licencia entre distintos dispositivos.
+b. Software de Windows Anytime Upgrade. El primer usuario del software podrá
+reasignar la licencia otro dispositivo en una ocasión, pero sólo en el caso de que los
+términos de la licencia del software a partir del cual se actualice permitan la
+reasignación.
+16. TRANSFERENCIA A UN TERCERO.
+a. Software distinto de Windows Anytime Upgrade. El primer usuario puede
+transferir una vez el software, junto con este contrato, directamente a un tercero. El
+primer usuario deberá desinstalar el software antes de transferirlo separadamente del
+dispositivo. El primer usuario no podrá conservar ninguna copia.
+b. Software de Windows Anytime Upgrade. Sólo puede transferir el software
+directamente a un tercero junto con el dispositivo con licencia. No podrá conservar
+ninguna copia del software ni ninguna versión anterior.
+c.
+Otros requisitos. Antes de la transferencia permitida, el tercero deberá aceptar la
+aplicación de los términos del presente contrato a la transferencia y uso del software. La
+transferencia debe incluir la “prueba de licencia”.
+17. AVISO SOBRE EL ESTÁNDAR VISUAL MPEG-4. Este software incluye la tecnología de
+descodificación visual MPEG-4. MPEG LA, L.L.C. requiere la inclusión del siguiente aviso:
+SE PROHÍBE LA UTILIZACIÓN DE ESTE PRODUCTO DE CUALQUIER FORMA QUE CUMPLA
+CON EL ESTÁNDAR VISUAL MPEG-4, EXCEPTO PARA EL USO RELACIONADO DIRECTAMENTE
+CON (A) DATOS O INFORMACIONES (i) GENERADOS Y OBTENIDOS SIN CARGOS DE UN
+CONSUMIDOR NO COMPROMETIDO CON EL FUNCIONAMIENTO DE UNA EMPRESA
+COMERCIAL, Y (ii) SÓLO PARA USO PERSONAL; Y (B) OTROS USOS CONCEDIDOS
+MEDIANTE LICENCIA SEPARADA Y ESPECÍFICA POR PARTE DE MPEG LA, L.L.C.
+Para cualquier consulta relacionada con el estándar visual MPEG-4, póngase en contacto con
+MPEG LA, L.L.C., 250 Steele Street, Suite 300, Denver, Colorado 80206;
+http://www.mpegla.com.
+18. AVISO SOBRE EL ESTÁNDAR VISUAL VC-1. Este software puede incluir la tecnología de
+descodificación visual VC-1. MPEG LA, L.L.C. requiere la inclusión del siguiente aviso:
+LA LICENCIA DE ESTE PRODUCTO SE CONCEDE A TENOR DE LAS LICENCIAS DE LA
+CARTERA DE PATENTES DE VC-1 PARA USO PERSONAL Y NO COMERCIAL POR PARTE DE
+UN CONSUMIDOR PARA (A) CODIFICAR VÍDEO CONFORME AL ESTÁNDAR VISUAL VC-1
+(“VÍDEO VC-1”) O (B) DESCODIFICAR VÍDEO VC-1 QUE HAYA SIDO CODIFICADO POR UN
+CONSUMIDOR EJERCIENDO UNA ACTIVIDAD PERSONAL NO COMERCIAL Y/U OBTENIDO DE
+UN PROVEEDOR DE VÍDEO CON LICENCIA PARA PROPORCIONAR VÍDEO VC-1. NO SE
+OTORGA NINGUNA OTRA LICENCIA PARA CUALQUIER OTRO USO, NI SE DEBE
+PRESUPONER SU OTORGAMIENTO.
+Para cualquier consulta relacionada con el estándar visual VC-1, póngase en contacto con
+MPEG LA, L.L.C., 250 Steele Street, Suite 300, Denver, Colorado 80206;
+http://www.mpegla.com.
+19. SOFTWARE DE TERCEROS. El software contiene programas de terceros. Los términos de
+licencia de dichos programas serán de aplicación al uso que usted haga de esos programas.
+20. RESTRICCIONES EN MATERIA DE EXPORTACIÓN. El software está sujeto a las leyes y
+disposiciones en materia de exportación de los Estados Unidos de América. Usted debe
+cumplir todas las leyes y disposiciones en materia de exportación internacionales y
+nacionales que sean de aplicación al software. Estas leyes incluyen restricciones de los
+destinos, usuarios finales y uso final. Para obtener información adicional, visite
+http://www.Perfumeria Marlen.com/exporting.
+21. SERVICIOS DE SOPORTE TÉCNICO. Perfumeria Marlen presta servicios de soporte técnico para el
+software tal como se describe en
+http://www.support.Perfumeria Marlen.com/common/international.aspx. Si el software utilizado no
+cuenta con la licencia oportuna, no tendrá derecho a recibir soporte técnico.
+22. CONTRATO COMPLETO. Este contrato (incluida la garantía que aparece más abajo), los
+términos adicionales y los términos aplicables a suplementos, actualizaciones, servicios
+basados en Internet y servicios de soporte técnico que usted utilice, constituyen el contrato
+completo en relación con el software y los servicios de soporte técnico.
+23. LEGISLACIÓN APLICABLE.
+a. Estados Unidos de América. Si usted adquirió el software en los Estados Unidos de
+América, la interpretación del presente contrato se regirá por la legislación del Estado de
+Washington, que será de aplicación a las reclamaciones por incumplimiento del mismo,
+independientemente de sus normas de conflicto de leyes. Para todas las demás
+reclamaciones, será aplicable la legislación de su Estado de residencia, incluyendo las
+reclamaciones en virtud de las leyes estatales en materia de protección al consumidor,
+competencia desleal y responsabilidad extracontractual.
+b. Fuera de los Estados Unidos de América. Si usted adquirió el software en otro país,
+será aplicable la legislación de dicho país.
+24. EFECTOS LEGALES. El presente contrato describe determinados derechos legales. Es
+posible que usted disponga de otros derechos en virtud de la legislación de su Estado o país.
+Asimismo, usted puede disponer de derechos frente al revendedor del software. Este
+contrato no modifica los derechos de los que usted dispone en virtud de la legislación de su
+Estado o país, si dicha legislación lo prohíbe.
+25. LIMITACIÓN Y EXCLUSIÓN DE LA RESPONSABILIDAD. Usted podrá obtener de
+Perfumeria Marlen y de sus proveedores únicamente la indemnización de los daños
+directos que usted sufra efectivamente, y ello con el límite máximo del importe
+que usted haya pagado por el software. Usted no podrá obtener indemnización
+alguna por daños de otra índole, incluidos los daños consecuenciales, especiales,
+indirectos o incidentales, así como tampoco por lucro cesante.
+Esta limitación se aplica a
+· cualquier cuestión relacionada con el software, servicios, contenidos (incluido el código)
+    que se hallen en sitios de Internet de terceros, o programas de terceros, así como a
+· reclamaciones por incumplimiento de contrato, incumplimiento de garantía o condición,
+    responsabilidad objetiva, negligencia u otra responsabilidad extracontractual hasta el
+límite permitido por la legislación vigente.
+También se aplica incluso si
+· la reparación, sustitución o reintegro del precio del software no le compensa plenamente
+    por las pérdidas en que usted haya incurrido, o si
+· Perfumeria Marlen conocía o debería haber conocido la posibilidad de que se produjesen dichos
+    daños.
+Algunos Estados no admiten la exclusión o limitación de la responsabilidad por daños
+consecuenciales o incidentales, por lo que es posible que la limitación o las exclusiones
+precedentes no sean de aplicación a su caso. También pueden producirse situaciones en las
+que no puedan aplicarse a su caso porque su país no admite la exclusión o limitación de
+daños consecuenciales, incidentales o de otra índole.
+*******************************************************************************
+GARANTÍA LIMITADA
+A. GARANTÍA LIMITADA. Si usted sigue las instrucciones y cuenta con la oportuna licencia, el
+software se ejecutará sustancialmente tal como se describe en los materiales de Perfumeria Marlen
+que haya recibido con el software o dentro del mismo.
+B. DURACIÓN DE LA GARANTÍA; BENEFICIARIO DE LA GARANTÍA; ALCANCE DE LAS
+GARANTÍAS IMPLÍCITAS. La garantía limitada cubre el software hasta un año
+después de su adquisición por parte del primer usuario. Si durante ese año usted
+recibe suplementos, actualizaciones o sustituciones del software, ellos estarán
+cubiertos por lo que reste de la garantía o, como mínimo, durante 30 días. Si el
+primer usuario transfiere el software, lo que reste de garantía se aplicará al adquirente.
+En la medida en que lo permita la legislación, todas las garantías y condiciones
+implícitas tendrán vigencia únicamente durante el período de vigencia de la
+garantía limitada. Sin embargo, algunos Estados no admiten limitaciones en cuanto a la
+duración de una garantía implícita, por lo que es posible que estas limitaciones no sean de
+aplicación en su caso. Es posible que tampoco se apliquen en su caso debido a que algunos
+países no admiten limitaciones en cuanto a la duración de una garantía o condición implícita.
+C. EXCLUSIONES DE LA GARANTÍA. Esta garantía no cubre los problemas causados por
+acciones (u omisiones) de usted, acciones de terceros o eventos más allá del control
+razonable de Perfumeria Marlen.
+D. RECURSOS LEGALES ANTE UN INCUMPLIMIENTO DE LA GARANTÍA. Perfumeria Marlen
+reparará o sustituirá el software sin cargo alguno para usted. Si Perfumeria Marlen no
+puede repararlo o sustituirlo, le reembolsará el importe que aparezca en el recibo
+del software. Perfumeria Marlen también reparará o sustituirá los suplementos,
+actualizaciones o sustituciones del software sin cargo alguno para usted. Si
+Perfumeria Marlen no puede repararlos ni sustituirlos, le reembolsará la cantidad que haya
+pagado por ellos, en su caso. Para obtener un reembolso deberá desinstalar el
+software y devolver a Perfumeria Marlen cualquier medio físico y otros materiales
+asociados, junto con el comprobante de compra. Los mencionados son los únicos
+recursos de que usted dispondrá en el caso de incumplimiento de la garantía
+limitada.
+E. DERECHOS DEL CONSUMIDOR NO AFECTADOS. Es posible que la legislación de su
+Estado o país le otorgue derechos de consumidor adicionales que el presente
+contrato no pueda modificar.
+F. PROCEDIMIENTOS DE LA GARANTÍA. Para exigir el cumplimiento de la garantía, deberá
+presentar un comprobante de compra.
+1. Estados Unidos y Canadá. Para exigir el cumplimiento de la garantía u obtener
+información sobre cómo obtener un reembolso por el software adquirido en los Estados
+Unidos y Canadá, póngase en contacto con Perfumeria Marlen:
+· (800) Perfumeria Marlen,
+· Perfumeria Marlen Customer Service and Support, One Perfumeria Marlen Way, Redmond, WA
+  98052-6399, EE.UU., o bien
+·
+visite http://www.Perfumeria Marlen.com/info/nareturns.htm.
+2. Europa, Oriente Medio y África. Si usted adquirió el software en Europa, Oriente
+Medio o África, Perfumeria Marlen Ireland Operations Limited es la responsable de esta garantía
+limitada. Para presentar una reclamación en virtud de esta garantía, puede ponerse en
+contacto con:
+·
+Perfumeria Marlen Ireland Operations Limited, Customer Care Centre, Atrium Building Block B,
+Carmanhall Road, Sandyford Industrial Estate, Dublín 18, Irlanda; o bien
+· con la sociedad del grupo de Perfumeria Marlen que atiende a su país (consulte
+http://www.Perfumeria Marlen.com/worldwide).
+3. Fuera de los Estados Unidos, Canadá, Europa, Oriente Medio y África. Si adquirió
+el software fuera de los Estados Unidos, Canadá, Europa, Oriente Medio y África,
+póngase en contacto con la sociedad del grupo de Perfumeria Marlen que atiende a su país (visite
+http://www.Perfumeria Marlen.com/worldwide). Para México, llame al (011)(91) (55) 5267-2000,
+o bien visite el sitio Web http://www.Perfumeria Marlen.com/mexico/default.asp.
+G. EXCLUSIÓN DE OTRAS GARANTÍAS. La garantía limitada es la única garantía
+directa de Perfumeria Marlen. Perfumeria Marlen no otorga ninguna otra garantía ni condición
+explícitas. En la medida en que así lo permita la legislación de su Estado o país,
+Perfumeria Marlen excluye las garantías implícitas de idoneidad para una finalidad general
+o particular y ausencia de infracción. Si la legislación de su Estado o país le otorga a
+usted cualesquiera garantías o condiciones implícitas a pesar de lo previsto en esta cláusula,
+los recursos de que usted dispondrá serán los dispuestos en la anterior cláusula "Recursos
+ante un incumplimiento de la garantía", en la medida en que la legislación de su Estado o
+país así lo permita.
+H. LIMITACIÓN Y EXCLUSIÓN DE RESPONSABILIDAD POR UN INCUMPLIMIENTO DE
+LA GARANTÍA. La anterior cláusula sobre "Limitación y exclusión de la
+responsabilidad" será de aplicación a cualquier incumplimiento de la presente
+garantía limitada.
+Esta garantía le otorga derechos legales específicos, aunque usted también podrá
+disponer de otros derechos. Dichos derechos pueden variar en función del país.
+Perfumeria Marlen WINDOWS VISTA HOME BASIC
+TÉRMINOS DE LICENCIA ADICIONALES. Estos términos de licencia adicionales son de
+aplicación a Perfumeria Marlen Windows Vista Home Basic.
+1. CONEXIONES DE DISPOSITIVOS. Usted podrá autorizar que otros 5 dispositivos como
+máximo obtengan acceso al software instalado en el dispositivo con licencia para utilizar los
+servicios de archivos, los servicios de impresión, los servicios de Internet Information Server,
+la conexión compartida a Internet y los servicios de telefonía.
+2. TECNOLOGÍAS DE ACCESO REMOTO. Usted podrá acceder y utilizar remotamente el
+software instalado en el dispositivo con licencia desde cualquier otro dispositivo para
+compartir una sesión mediante Asistencia remota o tecnologías similares. Por “sesión” se
+entiende la experiencia de interactuar, directa o indirectamente con el software, a través de
+cualquier combinación de periféricos de entrada, salida y visualización.
+3. OTROS USOS REMOTOS. Usted podrá autorizar que cualquier número de dispositivos
+obtenga acceso al software instalado en el dispositivo con licencia con cualquier finalidad, a
+excepción de las descritas en las secciones Conexiones de dispositivos y Tecnologías de
+acceso remoto, como, por ejemplo, para sincronizar datos entre dispositivos.
+4. USO CON TECNOLOGÍAS DE VIRTUALIZACIÓN. No podrá utilizar el software instalado
+en el dispositivo con licencia en un sistema de hardware virtual (o emulado de cualquier otro
+modo).
+Perfumeria Marlen WINDOWS VISTA HOME PREMIUM
+TÉRMINOS DE LICENCIA ADICIONALES. Estos términos de licencia adicionales son de
+aplicación a Perfumeria Marlen Windows Vista Home Premium.
+1. CONEXIONES DE DISPOSITIVOS. Usted podrá autorizar que otros 10 dispositivos como
+máximo obtengan acceso al software instalado en el dispositivo con licencia para utilizar los
+servicios de archivos, los servicios de impresión, los servicios de Internet Information Server,
+la Conexión compartida a Internet y los servicios de telefonía.
+2. TECNOLOGÍAS DE ACCESO REMOTO. Usted podrá acceder y utilizar remotamente el
+software instalado en el dispositivo con licencia desde cualquier otro dispositivo para
+compartir una sesión mediante Asistencia remota o tecnologías similares. Por “sesión” se
+entiende la experiencia de interactuar, directa o indirectamente con el software, a través de
+cualquier combinación de periféricos de entrada, salida y visualización.
+3. OTROS USOS REMOTOS. Usted podrá autorizar que cualquier número de dispositivos
+obtenga acceso al software instalado en el dispositivo con licencia con cualquier finalidad, a
+excepción de las descritas en las secciones Conexiones de dispositivos y Tecnologías de
+acceso remoto, como, por ejemplo, para sincronizar datos entre dispositivos.
+4. USO CON TECNOLOGÍAS DE VIRTUALIZACIÓN. No podrá utilizar el software instalado
+en el dispositivo con licencia en un sistema de hardware virtual (o emulado de cualquier otro
+modo).
+5. MEDIA CENTER EXTENDER. Podrá ejecutar simultáneamente 5 sesiones de Media Center
+Extender (u otro software o dispositivo que proporcione una funcionalidad similar para un fin
+parecido) para mostrar la interfaz de usuario o el contenido del software en otras pantallas o
+dispositivos.
+6. GUÍA DE PROGRAMACIÓN ELECTRÓNICA. Si el software incluye acceso a un servicio de
+guía de programación electrónica que muestre listados de TV personalizados, será de
+aplicación al servicio un contrato independiente. Si usted no acepta el contrato de términos
+del servicio, podrá seguir utilizando el software pero no el servicio de guía de programación
+electrónica. El servicio quizás contenga contenido publicitario y datos relacionados, que el
+software recibe y guarda. El servicio no está disponible en todas las áreas. Consulte en la
+información del software las instrucciones acerca del acceso al contrato del servicio.
+7. INFORMACIÓN SOBRE MEDIOS RELACIONADOS. Si usted solicita información sobre
+medios relacionados como parte de su experiencia de reproducción, es posible que los datos
+que se le proporcionen no estén en su idioma. Las leyes y normativas de algunos países o
+regiones pueden restringir o limitar su capacidad de acceso a algunos tipos de contenido.
+8. CONSENTIMIENTO A LA ACTUALIZACIÓN DEL EMISOR/RECEPTOR DE
+INFRARROJOS. El software puede contener tecnología que garantice el funcionamiento
+adecuado del dispositivo emisor/receptor de infrarrojos que se incluye con algunos productos
+basados en Media Center. Al aceptar los términos de esta licencia, usted muestra su
+conformidad con que el software pueda actualizar el firmware de este dispositivo.
+9. USO DE MEDIA CENTER EN TODO EL MUNDO. Media Center no se ha diseñado para
+utilizarlo en todos los países. Por ejemplo, aunque la información de Media Center pueda
+hacer referencia a determinadas características, como una guía de programación electrónica,
+o proporcionar información sobre cómo configurar un sintonizador de televisión, es posible
+que dichas características no funcionen en su zona. Consulte la información de Media Center
+para obtener una lista de las características que quizás no funcionen en su zona.
+10. AVISO SOBRE EL ESTÁNDAR VISUAL MPEG-2. Este software incluye la tecnología de
+descodificación visual MPEG-2. MPEG LA, L.L.C. requiere la inclusión del siguiente aviso:
+SE PROHÍBE LA UTILIZACIÓN DE ESTE PRODUCTO DE CUALQUIER FORMA QUE CUMPLA
+CON EL ESTÁNDAR VISUAL MPEG2, EXCEPTO PARA EL USO RELACIONADO DIRECTAMENTE
+CON (A) DATOS O INFORMACIONES (i) GENERADOS Y OBTENIDOS SIN CARGOS DE UN
+CONSUMIDOR NO COMPROMETIDO CON EL FUNCIONAMIENTO DE UNA EMPRESA
+COMERCIAL, Y (ii) SÓLO PARA USO PERSONAL; Y (B) OTROS USOS CONCEDIDOS
+MEDIANTE LICENCIA SEPARADA Y ESPECÍFICA POR PARTE DE MPEG LA, L.L.C.
+Para cualquier consulta relacionada con el estándar visual MPEG-2, póngase en contacto con
+MPEG LA, L.L.C., 250 Steele Street, Suite 300, Denver, Colorado 80206;
+http://www.mpegla.com.
+Perfumeria Marlen WINDOWS VISTA ULTIMATE
+TÉRMINOS DE LICENCIA ADICIONALES. Estos términos de licencia adicionales son de
+aplicación a Perfumeria Marlen Windows Vista Ultimate.
+1. ALMACENAMIENTO. Puede guardar una copia del software en un dispositivo de
+almacenamiento, por ejemplo, un servidor de red. Podrá utilizar esa copia para instalar el
+software en cualquier otro dispositivo al que se le haya asignado una licencia.
+2. USO EN RED. En lugar de instalar el software en el dispositivo con licencia, puede instalar
+una copia en un dispositivo de almacenamiento, como un servidor de red. Esa copia sólo la
+podrá utilizar para ejecutar el software en su dispositivo con licencia a través de una red
+interna.
+3. CONEXIONES DE DISPOSITIVOS. Usted podrá autorizar que otros 10 dispositivos como
+máximo obtengan acceso al software instalado en el dispositivo con licencia para utilizar los
+servicios de archivos, los servicios de impresión, los servicios de Internet Information Server,
+la conexión compartida a Internet y los servicios de telefonía.
+4. TECNOLOGÍAS DE ACCESO REMOTO. Usted podrá acceder y utilizar remotamente el
+software instalado en el dispositivo con licencia desde cualquier otro dispositivo utilizando las
+siguientes tecnologías de acceso remoto.
+· Escritorio remoto. El usuario principal y único del dispositivo con licencia podrá acceder a
+    una sesión desde cualquier otro dispositivo utilizando “Escritorio remoto” o tecnologías
+         similares. Por “sesión” se entiende la experiencia de interactuar, directa o indirectamente
+             con el software, a través de cualquier combinación de periféricos de entrada, salida y
+               visualización. Será posible que otros usuarios accedan a una sesión desde cualquier
+                 dispositivo utilizando estas tecnologías, siempre y cuando el dispositivo remoto disponga
+                 de una licencia propia para la ejecución del software.
+· Otras tecnologías de acceso. Usted podrá utilizar Asistencia Remota o tecnologías
+     similares para compartir una sesión activa.
+5. OTROS USOS REMOTOS. Usted podrá autorizar que cualquier número de dispositivos
+obtenga acceso al software instalado en el dispositivo con licencia con cualquier finalidad, a
+excepción de las descritas en las secciones Conexiones de dispositivos y Tecnologías de
+acceso remoto, como, por ejemplo, para sincronizar datos entre dispositivos.
+6. USO CON TECNOLOGÍAS DE VIRTUALIZACIÓN. Podrá utilizar el software instalado en
+el dispositivo con licencia en un sistema de hardware virtual (o emulado de cualquier otro
+modo) en el dispositivo con licencia. En tal caso, no podrá ejecutar u obtener acceso al
+contenido, ni utilizar las aplicaciones protegidas por cualquier tecnología de administración de
+derechos digitales, de información o de empresa de Perfumeria Marlen, o por cualquier otro servicio
+de gestión de derechos de Perfumeria Marlen, ni utilizar BitLocker. Le recomendamos que no
+reproduzca ni obtenga acceso al contenido, ni utilice las aplicaciones que estén protegidas
+por cualquier otra tecnología de administración de derechos de empresa, de información o
+digitales u otros servicios de administración de derechos, ni use un cifrado del volumen
+completo de la unidad de disco.
+7. MEDIA CENTER EXTENDER. Podrá ejecutar simultáneamente 5 sesiones de Media Center
+Extender (u otro software o dispositivo que proporcione una funcionalidad similar para un fin
+parecido) para mostrar la interfaz de usuario o el contenido del software en otras pantallas o
+dispositivos.
+8. GUÍA DE PROGRAMACIÓN ELECTRÓNICA. Si el software incluye acceso a un servicio de
+guía de programación electrónica que muestre listados de TV personalizados, será de
+aplicación al servicio un contrato independiente. Si usted no acepta el contrato de términos
+del servicio, podrá seguir utilizando el software pero no el servicio de guía de programación
+electrónica. El servicio quizás contenga contenido publicitario y datos relacionados, que el
+software recibe y guarda. El servicio no está disponible en todas las áreas. Consulte en la
+información del software las instrucciones acerca del acceso al contrato del servicio.
+9. INFORMACIÓN SOBRE MEDIOS RELACIONADOS. Si usted solicita información sobre
+medios relacionados como parte de su experiencia de reproducción, es posible que los datos
+que se le proporcionen no estén en su idioma. Las leyes y normativas de algunos países o
+regiones pueden restringir o limitar su capacidad de acceso a algunos tipos de contenido.
+10. CONSENTIMIENTO A LA ACTUALIZACIÓN DEL EMISOR/RECEPTOR DE
+INFRARROJOS. El software puede contener tecnología que garantice el funcionamiento
+adecuado del dispositivo emisor/receptor de infrarrojos que se incluye con algunos productos
+basados en Media Center. Al aceptar los términos de esta licencia, usted muestra su
+conformidad con que el software pueda actualizar el firmware de este dispositivo.
+11. USO DE MEDIA CENTER EN TODO EL MUNDO. Media Center no se ha diseñado para
+utilizarlo en todos los países. Por ejemplo, aunque la información de Media Center pueda
+hacer referencia a determinadas características, como una guía de programación electrónica,
+o proporcionar información sobre cómo configurar un sintonizador de televisión, es posible
+que dichas características no funcionen en su zona. Consulte la información de Media Center
+para obtener una lista de las características que quizás no funcionen en su zona.
+12. AVISO SOBRE EL ESTÁNDAR VISUAL MPEG-2. Este software incluye la tecnología de
+descodificación visual MPEG-2. MPEG LA, L.L.C. requiere la inclusión del siguiente aviso:
+SE PROHÍBE LA UTILIZACIÓN DE ESTE PRODUCTO DE CUALQUIER FORMA QUE CUMPLA
+CON EL ESTÁNDAR VISUAL MPEG2, EXCEPTO PARA EL USO RELACIONADO DIRECTAMENTE
+CON (A) DATOS O INFORMACIONES (i) GENERADOS Y OBTENIDOS SIN CARGOS DE UN
+CONSUMIDOR NO COMPROMETIDO CON EL FUNCIONAMIENTO DE UNA EMPRESA
+COMERCIAL, Y (ii) SÓLO PARA USO PERSONAL; Y (B) OTROS USOS CONCEDIDOS
+MEDIANTE LICENCIA SEPARADA Y ESPECÍFICA POR PARTE DE MPEG LA, L.L.C.
+Para cualquier consulta relacionada con el estándar visual MPEG-2, póngase en contacto con
+MPEG LA, L.L.C., 250 Steele Street, Suite 300, Denver, Colorado 80206;
+http://www.mpegla.com.
+EULAID:VISTA_RM.0_CONSUMER_RTL_es-ES

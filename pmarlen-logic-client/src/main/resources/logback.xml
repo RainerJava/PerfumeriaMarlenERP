@@ -1,0 +1,48 @@
+<configuration>
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%d{yyyy/MM/dd HH:mm:ss.SSS,America/Mexico_City} %-5p %c - %msg%n</Pattern>
+        </layout>  
+    </appender>  
+
+    <!-- log levels configuaration, by package :
+    TRACE 	most verbosse
+    DEBUG
+    INFO        medium verbose
+    WARN
+    ERROR
+    OFF         any message is printed.
+    -->
+
+    <logger name="com.pmarlen" additivity="false">
+        <level value="DEBUG" />
+        
+        <appender-ref ref="CONSOLE" />
+    </logger>
+
+    <logger name="com.tracktopell" additivity="false">
+        <level value="DEBUG" />
+
+        <appender-ref ref="CONSOLE" />
+    </logger>
+
+    <logger name="org.springframework" additivity="false">
+        <level value="WARN" />
+
+        <appender-ref ref="CONSOLE" />
+    </logger>
+
+
+    <logger name="org.hibernate" additivity="false">
+        <level value="DEBUG" />
+
+        <appender-ref ref="CONSOLE" />
+    </logger>
+
+    <root>
+        <level value="INFO" />          
+        <appender-ref ref="CONSOLE" />  
+    </root> 
+    
+</configuration>

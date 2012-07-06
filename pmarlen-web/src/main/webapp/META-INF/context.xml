@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" crossContext="true" path="/pmarlen-web-0.7-SNAPSHOT" reloadable="true">
+  <Resource auth="Container" driverClassName="com.mysql.jdbc.Driver" maxActive="3" maxIdle="5" maxWait="10000" name="jdbc/PMARLEN_DB_TEST_DS" password="PMARLEN_TEST_PASSWORD" type="javax.sql.DataSource" url="jdbc:mysql://localhost/PMARLEN_DB_TEST?characterEncoding=UTF-8" username="PMARLEN_TEST"/>
+  <Realm className="org.apache.catalina.realm.JDBCRealm" connectionName="PMARLEN_TEST" connectionPassword="PMARLEN_TEST_PASSWORD" connectionURL="jdbc:mysql://localhost/PMARLEN_DB_TEST?characterEncoding=UTF-8" digest="MD5" driverName="com.mysql.jdbc.Driver" roleNameCol="PERFIL_ID" userCredCol="PASSWORD" userNameCol="USUARIO_ID" userRoleTable="USUARIO_PERFIL" userTable="USUARIO"/>
+  <!--
+    <Resource	name="jdbc/PMARLEN_DB_PROD_DS"
+				auth="Container"
+				type="javax.sql.DataSource"
+				maxActive="3"
+				maxIdle="5"
+				maxWait="10000"
+				username="PMARLEN_PROD"
+				password="PMARLEN_PROD_PASSWORD"
+				driverClassName="com.mysql.jdbc.Driver"
+				url="jdbc:mysql://localhost/PMARLEN_DB_PROD?characterEncoding=UTF-8"/>
+
+	<Realm	className="org.apache.catalina.realm.JDBCRealm" 
+			connectionName="PMARLEN_PROD"
+			connectionPassword="PMARLEN_PROD_PASSWORD"
+			connectionURL="jdbc:mysql://localhost/PMARLEN_DB_PROD?characterEncoding=UTF-8"
+			digest="MD5" 
+			driverName="com.mysql.jdbc.Driver" 
+			
+			userTable="USUARIO" 
+			userNameCol="USUARIO_ID"
+			userCredCol="PASSWORD" 
+			userRoleTable="USUARIO_PERFIL"
+			roleNameCol="PERFIL_ID" />
+-->
+</Context>

@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<h:form xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:c="http://java.sun.com/jsp/jstl/core"
+        xmlns:ui="http://java.sun.com/jsf/facelets"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:a4j="http://richfaces.org/a4j"
+        xmlns:rich="http://richfaces.org/rich">
+
+    <table cellpadding="0" cellspacing="0" border="0" width="95%" align="center">
+        <tr>
+            <td width="100px" height="80" align="center">
+                <h:graphicImage id="graphicImageUser3" value="/images/Logo_T1.png" />
+            </td>
+            <td align="left">
+                <h:outputText value="#{UIMessages.MAIN_LEGEND}"      style="font-family: Arial; font-size : 18px;font-weight : bold;"/><br/>
+                <h:outputText value="#{UIMessages.MAIN_SYSTEM_NAME}" style="font-family: Arial;font-size : 14px;"/><br/>
+                <hr width="95%"/>
+                <h:outputText value="#{UIMessages.MENU_LOCATION} : "   style="font-family: Arial;font-size : 10px;"/>
+                <ui:insert name="location">
+                    #{UIMessages.MENU_LOCATION_PATH}
+                </ui:insert>
+            </td>
+
+            <td valign="middle" align="right">
+
+                <rich:panel  bodyClass="rich-laguna-panel-no-header" >
+
+                    <h:outputText value="#{sessionUserMB.usuarioAuthenticated.nombreCompleto}" 
+                                  style="font-family: Arial; font-size : 12px;font-weight : bold;"/>        
+                    <br/>
+                    <br/>
+                    <a4j:repeat var="perfil" value="#{sessionUserMB.usuarioAuthenticated.perfilCollection}">
+                        [<h:graphicImage id="graphicImageUser" value="/images/Perfil_#{perfil.id}_icon.png" title="#{perfil.descripcion}" />]
+                    </a4j:repeat>
+
+                </rich:panel>
+
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" height="20">
+
+                <rich:toolBar>
+
+                    <rich:toolBarGroup location="left">
+                        <rich:dropDownMenu rendered="#{rich:isUserInRole('sales') or rich:isUserInRole('admin') or rich:isUserInRole('root')}">
+                            <f:facet name="label">
+                                <h:panelGroup>
+                                    <h:graphicImage value="/images/orders.png"/>
+                                    <h:outputText value="Operacion"/>
+                                </h:panelGroup>
+                            </f:facet>
+
+                            <rich:menuItem submitMode="ajax" value="Prod x Empresa - Marca" 
+                                           action="#{navigationMB.verProductosXEmpresaMarca}" icon="/images/empresa_marca_list.png">
+                            </rich:menuItem>
+
+                            <rich:menuItem submitMode="ajax" value="Prod x Linea - Marca"
+                                           action="#{navigationMB.verProductosXLineaMarca}" icon="/images/linea_marca_list.png">
+                            </rich:menuItem>
+
+                            <rich:menuItem submitMode="ajax" value="Productos en carrito"
+                                           action="#{navigationMB.pedidoNuevo}" icon="/images/cart.png">
+                            </rich:menuItem>
+
+                            <rich:menuItem submitMode="ajax" value="Pedidos de Venta"
+                                           action="#{navigationMB.listarPedidosVentas}" icon="/images/order.png">
+                            </rich:menuItem>
+
+                        </rich:dropDownMenu>
+
+                        <rich:dropDownMenu rendered="#{rich:isUserInRole('stock') or rich:isUserInRole('admin') or rich:isUserInRole('root')}">
+                            <f:facet name="label">
+                                <h:panelGroup>
+                                    <h:graphicImage value="/images/admin.png"/>
+                                    <h:outputText value="Administracion"/>
+                                </h:panelGroup>
+                            </f:facet>
+                            <!--
+<rich:menuItem submitMode="ajax" value="Usuarios"
+               action="#{navigationMB.listarUsuarios}" icon="/images/users.png">
+</rich:menuItem>
+                            -->
+                            <rich:menuItem submitMode="ajax" value="Productos en Almancenes"
+                                           action="#{navigationMB.productosEnAlmacenes}" icon="/images/ico_DataTable.gif">
+                            </rich:menuItem>
+
+                        </rich:dropDownMenu>
+
+                    </rich:toolBarGroup>
+
+
+                    <rich:toolBarGroup location="right">
+                        <h:outputLink value="${facesContext.externalContext.requestContextPath}/pages/logout.jsf">
+                            <h:graphicImage value="/images/door_in.png"/>
+                        </h:outputLink>
+                    </rich:toolBarGroup>
+                </rich:toolBar>
+            </td>
+        </tr>
+
+    </table>
+
+
+</h:form>

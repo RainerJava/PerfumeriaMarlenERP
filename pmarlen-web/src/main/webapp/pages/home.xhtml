@@ -1,0 +1,38 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:a4j="http://richfaces.org/a4j"
+                xmlns:rich="http://richfaces.org/rich"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:richx="http://xpressosystems/richx"
+                template="/templates/main.xhtml">
+
+    <ui:define name="title">
+		home
+    </ui:define>
+
+    <ui:define name="location">
+        <h:outputText value="Operacion > Home" style="font-family: Arial;font-size : 10px;"/>
+    </ui:define>
+
+    <ui:define name="body">
+
+        <br/>
+        <br/>
+        <br/>
+        <h:outputText value="#{UIMessages.HOME_WELCOME_MESSAGE}"
+                      styleClass="boldText" />
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <h:outputText value="sessionUserMB.testMessage = #{sessionUserMB.testMessage}"/>
+        <br/>
+        <br/>
+        <br/>
+        <a href="${facesContext.externalContext.requestContextPath}/clientApp/PerfumeriaMarlen_app_installer.jar">Instalador de Aplicacion</a>
+        <br/>
+        <br/>
+    </ui:define>
+
+</ui:composition>

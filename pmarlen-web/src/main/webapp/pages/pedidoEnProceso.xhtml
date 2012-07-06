@@ -1,0 +1,352 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:a4j="http://richfaces.org/a4j"
+                xmlns:rich="http://richfaces.org/rich"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:richx="http://xpressosystems/richx"
+                template="/templates/main.xhtml">
+
+    <ui:define name="title">
+		productos en pedido confirmado
+    </ui:define>
+
+    <ui:define name="location">
+        <h:outputText value="Operacion > Productos en Pedido Simple"  style="font-family: Arial;font-size : 10px;"/>
+    </ui:define>
+
+    <ui:define name="body">
+
+            <style>
+        .tooltip {
+            background-color:#{richSkin.generalBackgroundColor};
+            border-width:3px;
+            padding:10px;
+        }
+        .tooltip-text {
+            width:100%;
+            height:100%;
+            cursor:url;
+            border-width:0px;
+            text-align:center;
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .tooltipData {
+            font-weight: bold;
+        }
+    </style>
+
+        <a4j:form id="listarPedidoEnProcesoForm">
+            <h:panelGroup>
+                <rich:messages layout="list" >
+                    <f:facet name="errorMarker">
+                        <h:graphicImage  value="/images/error16x16.gif" />
+                    </f:facet>
+                </rich:messages>
+            </h:panelGroup>
+    
+            <h:panelGrid columns="2" styleClass="center" border="0"
+                         columnClasses="columnWidth20,columnWidth80" >
+                <h:outputText value="Producto: " styleClass="label_bold_right"/>
+                <h:panelGroup style="display:block; text-align:left; background-color:transparent;">
+
+                    <h:inputText value="#{pedidoEnProcesoMB.nombreDescripcion}"
+                                 valueChangeListener="#{pedidoEnProcesoMB.nombreDescripcionChanged}">
+                        <a4j:support event="onkeyup" reRender="resultProductoByNombreDescripcion"
+                                     />
+                    </h:inputText>
+                    <!--
+                     <a4j:status>
+                        <f:facet name="start">
+                            <h:graphicImage  value="/images/gif_loading_azul.gif"/>
+                        </f:facet>
+                    </a4j:status>
+                    
+                    <a4j:commandButton   value="BUSCAR"
+                                         actionListener="#{pedidoEnProcesoMB.buscarProductoConNombreDescripcion}"
+                                         reRender="resultProductoByNombreDescripcion"
+                                         ignoreDupResponses="true">
+
+                    </a4j:commandButton>
+                    -->
+
+                    <h:selectOneMenu id="resultProductoByNombreDescripcion"
+                                        value="#{pedidoEnProcesoMB.productoSelected}">
+                        <f:selectItems  value="#{pedidoEnProcesoMB.productoConNombreDescripcion}"/>
+                    </h:selectOneMenu>
+
+                    <a4j:commandButton   value="+"
+                                         actionListener="#{pedidoEnProcesoMB.agregarProductoBuscado}"
+                                         reRender="listarPedidoEnProcesoForm"
+                                         ignoreDupResponses="true">
+                    </a4j:commandButton>
+
+                </h:panelGroup>
+                
+                <h:outputText value="Cliente : " styleClass="label_bold_right"/>
+                <h:panelGroup style="display:block; text-align:left; background-color:transparent;">
+                    <h:selectOneMenu id="clientePedido"
+                                     rendered="#{pedidoEnProcesoMB.pedidoEnabledToChangeBasicData}"
+                                     value="#{pedidoEnProcesoMB.clienteId}"
+                                     required="false">
+                        <f:selectItems  value="#{pedidoEnProcesoMB.clienteList}"/>
+                    </h:selectOneMenu>
+                    
+                    <h:outputText rendered="#{not pedidoEnProcesoMB.pedidoEnabledToChangeBasicData}"
+                                  value="#{pedidoEnProcesoMB.pedidoVenta.cliente.razonSocial}" 
+                                  styleClass="common_font_component"/>
+                </h:panelGroup>
+                
+                <h:outputText value="Forma de Pago : " styleClass="label_bold_right"/>
+                <h:panelGroup style="display:block; text-align:left; background-color:transparent;">
+                    <h:selectOneMenu id="formaDePago"
+                                     rendered="#{pedidoEnProcesoMB.pedidoEnabledToChangeBasicData}"
+                                     value="#{pedidoEnProcesoMB.formaDePagoId}"
+                                     required="false">
+                        <f:selectItems  value="#{pedidoEnProcesoMB.formaDePagoList}"/>
+                    </h:selectOneMenu>
+
+                    <h:outputText rendered="#{not pedidoEnProcesoMB.pedidoEnabledToChangeBasicData}"
+                                  value="#{pedidoEnProcesoMB.pedidoVenta.formaDePago.descripcion}"
+                                  styleClass="common_font_component"/>
+                </h:panelGroup>
+
+                <h:outputText value="Documento Fiscal: " styleClass="label_bold_right"/>
+                <h:panelGroup style="display:block; text-align:left; background-color:transparent;">
+                    <a4j:commandLink rendered="#{pedidoEnProcesoMB.pedidoVenta.esFiscal eq 0 and pedidoEnProcesoMB.pedidoEnabledToChangeBasicData}"
+                                     actionListener="#{pedidoEnProcesoMB.actualizarEstatusFiscal}"
+                                     reRender="listarPedidoEnProcesoForm"
+                                     ignoreDupResponses="true">
+                            <h:graphicImage style="border-style:none;" value="/images/nota_16x16.png" title="NOTA"/>
+                    </a4j:commandLink>
+
+                    <a4j:commandLink rendered="#{pedidoEnProcesoMB.pedidoVenta.esFiscal ne 0 and pedidoEnProcesoMB.pedidoEnabledToChangeBasicData}"
+                                     actionListener="#{pedidoEnProcesoMB.actualizarEstatusFiscal}"
+                                     reRender="listarPedidoEnProcesoForm"
+                                     ignoreDupResponses="true">
+                        <h:graphicImage style="border-style:none;" value="/images/factura_16x16.png" title="FACTURA"/>
+                    </a4j:commandLink>
+
+                    <h:outputText rendered="#{pedidoEnProcesoMB.pedidoVenta.esFiscal eq 0 and not pedidoEnProcesoMB.pedidoEnabledToChangeBasicData}"
+                                  value="NOTA"
+                                  styleClass="common_font_component"/>
+
+                    <h:outputText rendered="#{pedidoEnProcesoMB.pedidoVenta.esFiscal ne 0 and not pedidoEnProcesoMB.pedidoEnabledToChangeBasicData}"
+                                  value="FACTURA"
+                                  styleClass="common_font_component"/>
+                </h:panelGroup>
+
+                <h:outputText value="Estado: " styleClass="label_bold_right"/>
+                <h:panelGroup style="display:block; text-align:right; background-color:transparent;" >
+
+                    <rich:dataTable var="pedidoVentaEstado" value="#{pedidoEnProcesoMB.pedidoVentaEstadoList}" width="80%">
+                        <h:column>
+                            <h:outputText value="#{pedidoVentaEstado.estado.descripcion}" styleClass="common_font_component"/>
+                        </h:column>
+                        <h:column>
+                            <h:outputText value="#{pedidoVentaEstado.fecha}" styleClass="common_font_component">
+                                <f:convertDateTime locale="es_MX" pattern="yyyy/MM/DD hh:mm:ss"/>
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <h:outputText value="#{pedidoVentaEstado.usuario.nombreCompleto}" styleClass="common_font_component"/>
+                        </h:column>
+                    </rich:dataTable>
+                </h:panelGroup>
+            </h:panelGrid>
+
+            <rich:dataTable value="#{pedidoEnProcesoMB.pedidoVentaDetalleList}"
+                            var="dvp"
+                            width="90%"  
+                            styleClass="center" columnClasses="columnWidth10,columnWidth10,columnWidth60,columnWidth10,columnWidth10" >
+
+                <f:facet name="header">
+                    <h:panelGroup style="display:block; text-align:left; background-color:transparent;" >
+                        <h:outputText value="Detalle del Pedido" />
+
+                        <rich:spacer width="100"/>
+
+                        <a4j:commandButton  value="OK, Pedido Verificado"
+                                            action="#{pedidoEnProcesoMB.guardarPedidoVerificado}"
+                                            rendered="#{pedidoEnProcesoMB.pedidoVentaEstado_SINCRONIZADO}"/>
+
+                        <a4j:commandButton  value="OK, Surtir Pedido"
+                                            action="#{pedidoEnProcesoMB.guardarPedidoParaSurtir}"
+                                            rendered="#{pedidoEnProcesoMB.pedidoVentaEstado_VERIFICADO}"/>
+                        
+                        <a4j:commandButton  value="OK, Generar CFD ( DIGIFACT )"
+                                            action="#{pedidoEnProcesoMB.generarCFD}"
+                                            rendered="#{pedidoEnProcesoMB.pedidoVentaEstado_SURTIDO}"/>
+
+                    </h:panelGroup>
+
+                </f:facet>
+
+                <rich:column>
+                    <f:facet name="header">
+                        <h:outputText value="" />
+                    </f:facet>
+                    <h:panelGroup style="display:block; text-align:center; background-color:transparent;" >
+                        <a4j:commandLink actionListener="#{pedidoEnProcesoMB.eliminarProducto}"
+                                         reRender="listarPedidoEnProcesoForm,panelEditarCantidad"
+                                         ignoreDupResponses="true"
+                                         rendered="#{pedidoEnProcesoMB.pedidoEnabledToChangeNumbersData}">
+                            <h:graphicImage style="border-style:none;" value="/images/eliminar.gif" title="#{UIMessages.COMMON_DELETE}"/>
+                            <f:param name="productoId" value="#{dvp.producto.id}"/>
+                        </a4j:commandLink>
+                    </h:panelGroup>
+                </rich:column>
+
+                <rich:column>
+                    <f:facet name="header">
+                        <h:outputText value="Cant." />
+                    </f:facet>
+                    <h:panelGroup style="display:block; text-align:right; background-color:transparent;" >
+
+                        <rich:inputNumberSlider value="#{dvp.cantidad}"
+                                                width="150"   showToolTip="true"
+                                                minValue="1"  maxValue="#{dvp.cantMax}"
+                                                step="1"
+                                                rendered="#{pedidoEnProcesoMB.pedidoEnabledToChangeNumbersData}">
+                            <a4j:support reRender="listarPedidoEnProcesoForm" event="onchange"/>
+                        </rich:inputNumberSlider>
+
+                        <h:outputText value="#{dvp.cantidad}" rendered="#{not pedidoEnProcesoMB.pedidoEnabledToChangeNumbersData}"/>
+                    </h:panelGroup>
+                </rich:column>
+
+                <rich:column  >
+                    <f:facet name="header">
+                        <h:outputText value="Producto" />
+                    </f:facet>
+                    <h:panelGroup style="display:block; text-align:left; background-color:transparent;" >
+
+                        <rich:panel  styleClass="tooltip-text" bodyClass="rich-laguna-panel-no-header">
+                            <h:graphicImage value="/dynamicImages/Producto?id=#{dvp.producto.id}_20x15"/>
+                            <rich:spacer width="10"/>
+                            <h:outputText value="#{dvp.producto.nombre} / #{dvp.producto.presentacion}"/>
+
+                            <rich:toolTip showEvent="onclick" direction="bottom-left" mode="ajax" styleClass="tooltip" layout="block">
+                                <f:facet name="defaultContent">
+                                    <strong>Cargando...</strong>
+                                </f:facet>
+
+                                <h:panelGroup style="display:block; text-align:center; background-color:transparent;">
+                                    <h:graphicImage value="/dynamicImages/Producto?id=#{dvp.producto.id}_240x180" />
+                                </h:panelGroup>
+
+                            </rich:toolTip>
+                        </rich:panel>
+                        
+                    </h:panelGroup>
+                </rich:column>
+
+                <rich:column>
+                    <f:facet name="header">
+                        <h:outputText value="Precio base" />
+                    </f:facet>
+                    <h:panelGroup style="display:block; text-align:right; background-color:transparent;" >
+                        <h:outputText value="#{dvp.precioBase}">
+                            <f:convertNumber maxFractionDigits="2" pattern="$ ###,###,##0.00" locale="es_MX"/>
+                        </h:outputText>
+                    </h:panelGroup>
+                </rich:column>
+
+                <rich:column>
+                    <f:facet name="header">
+                        <h:outputText value="Descuento" />
+                    </f:facet>
+                    <h:panelGroup style="display:block; text-align:center; background-color:transparent;" >
+                        
+                        <h:outputText value="#{dvp.descuentoAplicado}"
+                                      rendered="#{not pedidoEnProcesoMB.pedidoEnabledToChangeNumbersData}">
+                            <f:convertNumber pattern="-000 %" locale="es_MX" type="percent"/>
+                        </h:outputText>
+                        
+                        <a4j:commandLink rendered="#{pedidoEnProcesoMB.pedidoEnabledToChangeNumbersData and dvp.descuentoAplicado eq 0.0}"
+                                         actionListener="#{pedidoEnProcesoMB.activarDescuento}"
+                                         reRender="listarPedidoEnProcesoForm"
+                                         ignoreDupResponses="true">
+5                            <h:graphicImage style="border-style:none;" rendered="#{dvp.producto.factorMaxDesc eq 0.05}" value="/images/disc_5_disabled.png"  title="#{(1.0 - dvp.descuentoAplicado) * dvp.precioBase * dvp.cantidad} DESCUENTO APLICAR"/>
+                            <h:graphicImage style="border-style:none;" rendered="#{dvp.producto.factorMaxDesc eq 0.10}" value="/images/disc_10_disabled.png" title="#{(1.0 - dvp.descuentoAplicado) * dvp.precioBase * dvp.cantidad} DESCUENTO APLICAR"/>
+                            <f:param name="productoId" value="#{dvp.producto.id}"/>
+                        </a4j:commandLink>
+
+                        <a4j:commandLink rendered="#{pedidoEnProcesoMB.pedidoEnabledToChangeNumbersData and dvp.descuentoAplicado gt 0.0}"
+                                         actionListener="#{pedidoEnProcesoMB.desactivarDescuento}"
+                                         reRender="listarPedidoEnProcesoForm"
+                                         ignoreDupResponses="true">
+                            <h:graphicImage style="border-style:none;" rendered="#{dvp.producto.factorMaxDesc eq 0.05}" value="/images/disc_5_enabled.png"  title="#{(1.0 - dvp.descuentoAplicado) * dvp.precioBase * dvp.cantidad} DESCUENTO APLICADO"/>
+                            <h:graphicImage style="border-style:none;" rendered="#{dvp.producto.factorMaxDesc eq 0.10}" value="/images/disc_10_enabled.png" title="#{(1.0 - dvp.descuentoAplicado) * dvp.precioBase * dvp.cantidad} DESCUENTO APLICADO"/>
+                            <f:param name="productoId" value="#{dvp.producto.id}"/>
+                        </a4j:commandLink>
+
+                    </h:panelGroup>
+                </rich:column>
+
+                <rich:column>
+                    <f:facet name="header">
+                        <h:outputText value="Importe" />
+                    </f:facet>
+                    <h:panelGroup style="display:block; text-align:right; background-color:transparent;" >
+                        <h:outputText value="#{dvp.precioBase * dvp.cantidad}">
+                            <f:convertNumber maxFractionDigits="2" pattern="$ ###,###,##0.00" locale="es_MX"/>
+                        </h:outputText>
+                    </h:panelGroup>
+                </rich:column>
+
+            </rich:dataTable>
+            <table width="90%" align="center" border="0">
+                <tr>
+                    <td width="90%" align="right">
+                        <h:outputText value="Sub Total:"/>
+                    </td>
+                    <td width="10%" align="right">
+                        <h:outputText value="#{pedidoEnProcesoMB.pedidoFooter.subtotal}">
+                            <f:convertNumber maxFractionDigits="2" pattern="$ ###,###,##0.00" locale="es_MX"/>
+                        </h:outputText>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td width="90%" align="right">
+                        <h:outputText value="I.V.A. :"
+                                      rendered="#{pedidoEnProcesoMB.pedidoVenta.esFiscal ne 0}"/>
+                    </td>
+                    <td width="10%" align="right">
+                        <h:outputText   value="#{pedidoEnProcesoMB.pedidoFooter.impuesto}"
+                                        rendered="#{pedidoEnProcesoMB.pedidoVenta.esFiscal ne 0}">
+                            <f:convertNumber maxFractionDigits="2" pattern="$ ###,###,##0.00" locale="es_MX"/>
+                        </h:outputText>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td width="90%" align="right">
+                        <h:outputText value="Descuento:"/>
+                    </td>
+                    <td width="10%" align="right">
+                        <h:outputText value="#{pedidoEnProcesoMB.pedidoFooter.descuento}">
+                            <f:convertNumber maxFractionDigits="2" pattern="$ -###,###,##0.00" locale="es_MX"/>
+                        </h:outputText>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td width="90%" align="right">
+                        <h:outputText value="Total:"/>
+                    </td>
+                    <td width="10%" align="right">
+                        <h:outputText value="#{pedidoEnProcesoMB.pedidoFooter.total}">
+                            <f:convertNumber maxFractionDigits="2" pattern="$ ###,###,##0.00" locale="es_MX"/>
+                        </h:outputText>
+                    </td>
+                </tr>
+
+            </table>
+
+        </a4j:form>
+    </ui:define>
+
+</ui:composition>

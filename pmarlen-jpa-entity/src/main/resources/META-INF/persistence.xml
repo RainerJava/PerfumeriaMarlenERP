@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence                                  http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+  <persistence-unit name="PMARLEN_LOGIC_PU">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <class>com.pmarlen.model.beans.Producto</class>
+    <class>com.pmarlen.model.beans.CodigoDeBarras</class>
+    <class>com.pmarlen.model.beans.CodigoDeBarrasPK</class>
+    <class>com.pmarlen.model.beans.FacturaProveedor</class>
+    <class>com.pmarlen.model.beans.CuentaBancaria</class>
+    <class>com.pmarlen.model.beans.PedidoVentaEstado</class>
+    <class>com.pmarlen.model.beans.PedidoVentaEstadoPK</class>
+    <class>com.pmarlen.model.beans.PedidoVenta</class>
+    <class>com.pmarlen.model.beans.FormaDePago</class>
+    <class>com.pmarlen.model.beans.Marca</class>
+    <class>com.pmarlen.model.beans.Perfil</class>
+    <class>com.pmarlen.model.beans.EstadoDeCuentaClientes</class>
+    <class>com.pmarlen.model.beans.Poblacion</class>
+    <class>com.pmarlen.model.beans.Almacen</class>
+    <class>com.pmarlen.model.beans.Empresa</class>
+    <class>com.pmarlen.model.beans.PedidoVentaDetalle</class>
+    <class>com.pmarlen.model.beans.PedidoVentaDetallePK</class>
+    <class>com.pmarlen.model.beans.Multimedio</class>
+    <class>com.pmarlen.model.beans.PedidoCompraDetalle</class>
+    <class>com.pmarlen.model.beans.PedidoCompraDetallePK</class>
+    <class>com.pmarlen.model.beans.MensajesParaPortal</class>
+    <class>com.pmarlen.model.beans.MensajesParaPortalPK</class>
+    <class>com.pmarlen.model.beans.Banco</class>
+    <class>com.pmarlen.model.beans.Linea</class>
+    <class>com.pmarlen.model.beans.ProveedorProducto</class>
+    <class>com.pmarlen.model.beans.ProveedorProductoPK</class>
+    <class>com.pmarlen.model.beans.Estado</class>
+    <class>com.pmarlen.model.beans.Usuario</class>
+    <class>com.pmarlen.model.beans.PedidoCompra</class>
+    <class>com.pmarlen.model.beans.TipoMovimiento</class>
+    <class>com.pmarlen.model.beans.AlmacenProducto</class>
+    <class>com.pmarlen.model.beans.AlmacenProductoPK</class>
+    <class>com.pmarlen.model.beans.EstadoDeCuentaProveedores</class>
+    <class>com.pmarlen.model.beans.Contacto</class>
+    <class>com.pmarlen.model.beans.PedidoCompraEstado</class>
+    <class>com.pmarlen.model.beans.PedidoCompraEstadoPK</class>
+    <class>com.pmarlen.model.beans.FacturaCliente</class>
+    <class>com.pmarlen.model.beans.Cliente</class>
+    <class>com.pmarlen.model.beans.MovimientoHistoricoProducto</class>
+    <class>com.pmarlen.model.beans.MovimientoHistoricoProductoPK</class>
+    <class>com.pmarlen.model.beans.EstadoDeCuenta</class>
+    <class>com.pmarlen.model.beans.Proveedor</class>
+    <exclude-unlisted-classes/>
+    <properties>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+      <property name="hibernate.show_sql" value="false"/>
+      <property name="hibernate.format_sql" value="true"/>
+      <!--
+            <property name="hibernate.cache.provider_class" value="org.hibernate.cache.HashtableCacheProvider" />
+			-->
+      <!--
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
+	  -->
+    </properties>
+  </persistence-unit>
+
+  <persistence-unit name="PMARLEN_LOGIC_PU_CLIENT">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <class>com.pmarlen.model.beans.Producto</class>
+    <class>com.pmarlen.model.beans.CodigoDeBarras</class>
+    <class>com.pmarlen.model.beans.CodigoDeBarrasPK</class>
+    <class>com.pmarlen.model.beans.FacturaProveedor</class>
+    <class>com.pmarlen.model.beans.CuentaBancaria</class>
+    <class>com.pmarlen.model.beans.PedidoVentaEstado</class>
+    <class>com.pmarlen.model.beans.PedidoVentaEstadoPK</class>
+    <class>com.pmarlen.model.beans.PedidoVenta</class>
+    <class>com.pmarlen.model.beans.FormaDePago</class>
+    <class>com.pmarlen.model.beans.Marca</class>
+    <class>com.pmarlen.model.beans.Perfil</class>
+    <class>com.pmarlen.model.beans.EstadoDeCuentaClientes</class>
+    <class>com.pmarlen.model.beans.Poblacion</class>
+    <class>com.pmarlen.model.beans.Almacen</class>
+    <class>com.pmarlen.model.beans.Empresa</class>
+    <class>com.pmarlen.model.beans.PedidoVentaDetalle</class>
+    <class>com.pmarlen.model.beans.PedidoVentaDetallePK</class>
+    <class>com.pmarlen.model.beans.Multimedio</class>
+    <class>com.pmarlen.model.beans.PedidoCompraDetalle</class>
+    <class>com.pmarlen.model.beans.PedidoCompraDetallePK</class>
+    <class>com.pmarlen.model.beans.MensajesParaPortal</class>
+    <class>com.pmarlen.model.beans.MensajesParaPortalPK</class>
+    <class>com.pmarlen.model.beans.Banco</class>
+    <class>com.pmarlen.model.beans.Linea</class>
+    <class>com.pmarlen.model.beans.ProveedorProducto</class>
+    <class>com.pmarlen.model.beans.ProveedorProductoPK</class>
+    <class>com.pmarlen.model.beans.Estado</class>
+    <class>com.pmarlen.model.beans.Usuario</class>
+    <class>com.pmarlen.model.beans.PedidoCompra</class>
+    <class>com.pmarlen.model.beans.TipoMovimiento</class>
+    <class>com.pmarlen.model.beans.AlmacenProducto</class>
+    <class>com.pmarlen.model.beans.AlmacenProductoPK</class>
+    <class>com.pmarlen.model.beans.EstadoDeCuentaProveedores</class>
+    <class>com.pmarlen.model.beans.Contacto</class>
+    <class>com.pmarlen.model.beans.PedidoCompraEstado</class>
+    <class>com.pmarlen.model.beans.PedidoCompraEstadoPK</class>
+    <class>com.pmarlen.model.beans.FacturaCliente</class>
+    <class>com.pmarlen.model.beans.Cliente</class>
+    <class>com.pmarlen.model.beans.MovimientoHistoricoProducto</class>
+    <class>com.pmarlen.model.beans.MovimientoHistoricoProductoPK</class>
+    <class>com.pmarlen.model.beans.EstadoDeCuenta</class>
+    <class>com.pmarlen.model.beans.Proveedor</class>
+    <exclude-unlisted-classes/>
+    <properties>
+	  <property name="hibernate.dialect" value="org.hibernate.dialect.DerbyDialect"/>
+      <property name="hibernate.show_sql" value="true"/>
+      <property name="hibernate.format_sql" value="true"/>
+      <!--
+            <property name="hibernate.cache.provider_class" value="org.hibernate.cache.HashtableCacheProvider" />
+      -->
+	<!--
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
+	-->
+    </properties>
+  </persistence-unit>
+  
+  <persistence-unit name="PMARLEN_LOGIC_PU_CLIENT_UPDATE">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <class>com.pmarlen.model.beans.Producto</class>
+    <class>com.pmarlen.model.beans.CodigoDeBarras</class>
+    <class>com.pmarlen.model.beans.CodigoDeBarrasPK</class>
+    <class>com.pmarlen.model.beans.FacturaProveedor</class>
+    <class>com.pmarlen.model.beans.CuentaBancaria</class>
+    <class>com.pmarlen.model.beans.PedidoVentaEstado</class>
+    <class>com.pmarlen.model.beans.PedidoVentaEstadoPK</class>
+    <class>com.pmarlen.model.beans.PedidoVenta</class>
+    <class>com.pmarlen.model.beans.FormaDePago</class>
+    <class>com.pmarlen.model.beans.Marca</class>
+    <class>com.pmarlen.model.beans.Perfil</class>
+    <class>com.pmarlen.model.beans.EstadoDeCuentaClientes</class>
+    <class>com.pmarlen.model.beans.Poblacion</class>
+    <class>com.pmarlen.model.beans.Almacen</class>
+    <class>com.pmarlen.model.beans.Empresa</class>
+    <class>com.pmarlen.model.beans.PedidoVentaDetalle</class>
+    <class>com.pmarlen.model.beans.PedidoVentaDetallePK</class>
+    <class>com.pmarlen.model.beans.Multimedio</class>
+    <class>com.pmarlen.model.beans.PedidoCompraDetalle</class>
+    <class>com.pmarlen.model.beans.PedidoCompraDetallePK</class>
+    <class>com.pmarlen.model.beans.MensajesParaPortal</class>
+    <class>com.pmarlen.model.beans.MensajesParaPortalPK</class>
+    <class>com.pmarlen.model.beans.Banco</class>
+    <class>com.pmarlen.model.beans.Linea</class>
+    <class>com.pmarlen.model.beans.ProveedorProducto</class>
+    <class>com.pmarlen.model.beans.ProveedorProductoPK</class>
+    <class>com.pmarlen.model.beans.Estado</class>
+    <class>com.pmarlen.model.beans.Usuario</class>
+    <class>com.pmarlen.model.beans.PedidoCompra</class>
+    <class>com.pmarlen.model.beans.TipoMovimiento</class>
+    <class>com.pmarlen.model.beans.AlmacenProducto</class>
+    <class>com.pmarlen.model.beans.AlmacenProductoPK</class>
+    <class>com.pmarlen.model.beans.EstadoDeCuentaProveedores</class>
+    <class>com.pmarlen.model.beans.Contacto</class>
+    <class>com.pmarlen.model.beans.PedidoCompraEstado</class>
+    <class>com.pmarlen.model.beans.PedidoCompraEstadoPK</class>
+    <class>com.pmarlen.model.beans.FacturaCliente</class>
+    <class>com.pmarlen.model.beans.Cliente</class>
+    <class>com.pmarlen.model.beans.MovimientoHistoricoProducto</class>
+    <class>com.pmarlen.model.beans.MovimientoHistoricoProductoPK</class>
+    <class>com.pmarlen.model.beans.EstadoDeCuenta</class>
+    <class>com.pmarlen.model.beans.Proveedor</class>
+    <exclude-unlisted-classes/>
+    <properties>
+	  <property name="hibernate.dialect" value="org.hibernate.dialect.DerbyDialect"/>
+      <property name="hibernate.show_sql" value="true"/>
+      <property name="hibernate.format_sql" value="true"/>
+      <!--
+            <property name="hibernate.cache.provider_class" value="org.hibernate.cache.HashtableCacheProvider" />
+            -->
+	  <property name="hibernate.hbm2ddl.auto" value="update"/>
+	
+    </properties>
+  </persistence-unit>  
+</persistence>
