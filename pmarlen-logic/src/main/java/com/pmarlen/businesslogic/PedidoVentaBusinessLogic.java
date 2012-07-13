@@ -642,7 +642,7 @@ public class PedidoVentaBusinessLogic {
 					clienteFound = null;
 				}
 				
-				logger.error("\t\t-->> [1.1.1. ] EntityNotFoundException ==>> clienteFoundBean="+clienteFoundBean);
+				logger.debug("\t\t-->> [1.1.1. ] ==>> clienteFoundBean="+clienteFoundBean);
 				
 				if( ! clienteFoundBean ) {					
 					Cliente clienteNuevo = new Cliente();
@@ -721,7 +721,9 @@ public class PedidoVentaBusinessLogic {
 				pedidoVentaEstadoNuevo.setFecha(new Date());
 				pedidoVentaEstadoNuevo.setPedidoVenta(pedidoVenta);
 				pedidoVentaEstadoNuevo.setUsuario(usuarioModificoRefreshed);
-				
+				em.persist(pedidoVentaEstadoNuevo);
+				logger.debug("\t\t-->> [1.7.9]guardarPedidosEnviados: pedidoVentaEstadoNuevo="+pedidoVentaEstadoNuevo.getPedidoVentaEstadoPK());
+				/*
 				if(pedidoVentaEstadoCollection != null) {
                     pedidoVentaEstadoCollection.add(pedidoVentaEstadoNuevo);
                 } else {
@@ -739,11 +741,14 @@ public class PedidoVentaBusinessLogic {
                     em.persist(pedidoVentaEstadoInsert);
                     logger.debug("\t\t\t-->> [1.8.1]guardarPedidosEnviados: OK persist PedidoVentaEstado: pedioId="+pedidoVentaEstadoInsert);
                 }
+				*/
 				logger.debug("\t\t-->> [1.15]guardarPedidosEnviados: OK Pedido Guardado");
+				em.flush();
+				logger.debug("\t\t-->> [1.16]guardarPedidosEnviados: em.flush(); Ok!!");
 			}
 			logger.debug("\t-->> guardarPedidosEnviados: commit ?");
             em.getTransaction().commit();            
-			logger.debug("\t-->> guardarPedidosEnviados: OK");
+			logger.debug("\t-->> guardarPedidosEnviados: commit OK");
         } catch (Exception e) {
 			//logger.error("Exception caught:", e);
             if (em.getTransaction().isActive()) {

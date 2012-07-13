@@ -324,9 +324,9 @@
                                         <copy todir="${staging.dir}">
                                             <fileset dir="${basedir}/src/izpack" />
                                         </copy>
-										<echo	message="=======================>>> copy the version file."/>
-										<copy	todir="${staging.dir}" 
-												file="${basedir}/../pmarlen-commons/target/classes/com/tracktopell/util/version/file/Version.properties"/>
+					<echo	message="=======================>>> copy the version file."/>
+					<copy	todir="${staging.dir}" 
+						file="${basedir}/../pmarlen-commons/target/classes/com/tracktopell/util/version/file/Version.properties"/>
                                     </tasks>
                                 </configuration>
                             </execution>
@@ -451,6 +451,9 @@
                                         <copy todir="${staging.dir}">
                                             <fileset dir="${basedir}/src/izpack" />
                                         </copy>
+										<echo	message="=======================>>> copy the version file."/>
+										<copy	todir="${staging.dir}" 
+												file="${basedir}/../pmarlen-commons/target/classes/com/tracktopell/util/version/file/Version.properties"/>
                                     </tasks>
                                 </configuration>
                             </execution>
